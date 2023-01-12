@@ -1,3 +1,7 @@
+.body {
+  overflow:hidden;
+}
+
 .App {
   text-align: center;
 }
@@ -28,6 +32,12 @@
   color: #61dafb;
 }
 
+.snapping {
+  scroll-snap-type: y mandatory;
+}
+.snapper{
+  scroll-snap-align: center;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +46,14 @@
     transform: rotate(360deg);
   }
 }
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #131622;
+  -webkit-border-radius: 1ex;
+}
+

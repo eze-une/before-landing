@@ -1,0 +1,63 @@
+import React from "react";
+import curvedUnderline from "../../assets/Vector 336.png";
+import Eyes from "../../assets/Group 1929.png";
+import RobotHand from "../../assets/Group 1930.png";
+function Hero() {
+  return (
+    <div className="w-full h-[95vh] flex flex-col md:w-[85%]">
+      <div className=" flex flex-row items-center justify-between ">
+        {/* left */}
+        <div className="flex flex-col h-full w-[50%] items-start justify-center text-left">
+          <h1 className="text-5xl  text-left text-[56px] font-bold mb-10">
+            We build{" "}
+            <span className="inline-block">
+              <span
+                className=" text-[#E7F0F5]"
+                style={{ "WebkitTextStroke": "1px black" }}
+              >
+                crazy
+              </span>
+              <img
+                src={curvedUnderline}
+                className="w-[125px] h-[21.07px]"
+                alt="Flowbite Logo"
+              />
+            </span>
+            <br />
+            ideas that l
+            <span className="inline-block">
+              <img
+                src={Eyes}
+                className="w-[36px] h-[36.5px]"
+                alt="Flowbite Logo"
+              />
+            </span>
+            <span className="inline-block ml-1">
+              <img
+                src={Eyes}
+                className="w-[36px] h-[36.5px]"
+                alt="Flowbite Logo"
+              />
+            </span>
+            k imaginatve
+          </h1>
+          <h2 className="text-2xl">
+            The word <span className="text-[#57BE94]">ablaze</span> refers to a{" "}
+            <span className="text-[#FFAE00]">flame</span> <br /> with in a feild
+            of vision
+          </h2>
+        </div>
+        {/* right */}
+        <div className=" w-[50%] h-full">
+          <img src={RobotHand} className="" alt="Flowbite Logo" />
+        </div>
+      </div>
+      <div className="">
+        {/* <section className="bg-green-300  rounded h-5 w-5"></section> */}
+        Explore more
+      </div>
+    </div>
+  );
+}
+
+export default Hero;
