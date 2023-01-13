@@ -3,7 +3,6 @@
 
 // function Teams() {
 
-
 //   const changeonClick = () => setisClicked(!isClicked);
 
 //   return (
@@ -79,13 +78,11 @@
 //   );
 // }
 
-
-
 // export default Teams;
 
 // import "./styles.css";
 import { useRef, useState } from "react";
-import { motion, useScroll,useAnimation } from "framer-motion";
+import { motion, useScroll, useAnimation } from "framer-motion";
 
 export default function Teams() {
   const ref = useRef(null);
@@ -108,212 +105,170 @@ export default function Teams() {
           style={{ pathLength: scrollXProgress }}
         />
       </svg> */}
-      {/* <div  >
-      <ul ref={ref} className="flex overflow-x-scroll p-20 space-x-10">
-        <li>
-          <motion.div layout transition={spring} onClick={changeisAnimating}>
+      <div className="flex flex-row p-20 m-5 overflow-scroll space-x-10 w-full">
+        <motion.div layout transition={spring} onClick={changeisAnimating}>
+          <div
+            className={
+              isAnimating
+                ? "h-[300px] w-[250px] relative z-0"
+                : "h-[300px] w-[130px] relative z-0"
+            }
+          >
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
+              className="h-full w-full rounded-[15px] bg-cover"
+              alt="Flowbite Logo"
+            />
             <div
               className={
                 isAnimating
-                  ? "h-[300px] w-[250px] relative z-0"
-                  : "h-[300px] w-[150px] relative z-0"
+                  ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[10px]"
+                  : "absolute text-left w-full h-full inset-0 flex flex-col justify-end items-start z-10 rounded-[15px] text-[#ffffff] bg-black bg-opacity-50"
               }
             >
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                className="h-full w-full rounded-[25px] bg-cover"
-                alt="Flowbite Logo"
-              />
-              <div
-                className={
-                  isAnimating
-                    ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
-                    : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
-                }
-              >
-                <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
-                  <p className="text-2xl font-bold ">sthn</p>
-                  <p className="">sthn</p>
-                </div>
+              <div className={isAnimating ? "" : "rotate-[270deg] w-full"}>
+                <p className="text-2xl font-bold ">Robel Mesfin</p>
+                <p className="">CEO at Ablaze Labs</p>
               </div>
             </div>
-          </motion.div>
-        </li>
-        <li>
-          <motion.div layout transition={spring} onClick={changeisAnimating}>
+          </div>
+        </motion.div>
+        <motion.div layout transition={spring} onClick={changeisAnimating}>
+          <div
+            className={
+              isAnimating
+                ? "h-[300px] w-[250px] relative z-0"
+                : "h-[300px] w-[150px] relative z-0"
+            }
+          >
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
+              className="h-full w-full rounded-[25px] bg-cover"
+              alt="Flowbite Logo"
+            />
             <div
               className={
                 isAnimating
-                  ? "h-[300px] w-[250px] relative z-0"
-                  : "h-[300px] w-[150px] relative z-0"
+                  ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
+                  : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
               }
             >
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                className="h-full w-full rounded-[25px] bg-cover"
-                alt="Flowbite Logo"
-              />
-              <div
-                className={
-                  isAnimating
-                    ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
-                    : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
-                }
-              >
-                <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
-                  <p className="text-2xl font-bold ">sthn</p>
-                  <p className="">sthn</p>
-                </div>
+              <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
+                <p className="text-2xl font-bold ">sthn</p>
+                <p className="">sthn</p>
               </div>
             </div>
-          </motion.div>
-        </li>
-        <li>
-          <motion.div layout transition={spring} onClick={changeisAnimating}>
+          </div>
+        </motion.div>
+        <motion.div layout transition={spring} onClick={changeisAnimating}>
+          <div
+            className={
+              isAnimating
+                ? "h-[300px] w-[250px] relative z-0"
+                : "h-[300px] w-[150px] relative z-0"
+            }
+          >
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
+              className="h-full w-full rounded-[25px] bg-cover"
+              alt="Flowbite Logo"
+            />
             <div
               className={
                 isAnimating
-                  ? "h-[300px] w-[250px] relative z-0"
-                  : "h-[300px] w-[150px] relative z-0"
+                  ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
+                  : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
               }
             >
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                className="h-full w-full rounded-[25px] bg-cover"
-                alt="Flowbite Logo"
-              />
-              <div
-                className={
-                  isAnimating
-                    ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
-                    : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
-                }
-              >
-                <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
-                  <p className="text-2xl font-bold ">sthn</p>
-                  <p className="">sthn</p>
-                </div>
+              <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
+                <p className="text-2xl font-bold ">sthn</p>
+                <p className="">sthn</p>
               </div>
             </div>
-          </motion.div>
-        </li>
-        <li>
-          <motion.div layout transition={spring} onClick={changeisAnimating}>
+          </div>
+        </motion.div>
+        <motion.div layout transition={spring} onClick={changeisAnimating}>
+          <div
+            className={
+              isAnimating
+                ? "h-[300px] w-[250px] relative z-0"
+                : "h-[300px] w-[150px] relative z-0"
+            }
+          >
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
+              className="h-full w-full rounded-[25px] bg-cover"
+              alt="Flowbite Logo"
+            />
             <div
               className={
                 isAnimating
-                  ? "h-[300px] w-[250px] relative z-0"
-                  : "h-[300px] w-[150px] relative z-0"
+                  ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
+                  : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
               }
             >
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                className="h-full w-full rounded-[25px] bg-cover"
-                alt="Flowbite Logo"
-              />
-              <div
-                className={
-                  isAnimating
-                    ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
-                    : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
-                }
-              >
-                <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
-                  <p className="text-2xl font-bold ">sthn</p>
-                  <p className="">sthn</p>
-                </div>
+              <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
+                <p className="text-2xl font-bold ">sthn</p>
+                <p className="">sthn</p>
               </div>
             </div>
-          </motion.div>
-        </li><li>
-          <motion.div layout transition={spring} onClick={changeisAnimating}>
+          </div>
+        </motion.div>
+        <motion.div layout transition={spring} onClick={changeisAnimating}>
+          <div
+            className={
+              isAnimating
+                ? "h-[300px] w-[250px] relative z-0"
+                : "h-[300px] w-[150px] relative z-0"
+            }
+          >
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
+              className="h-full w-full rounded-[25px] bg-cover"
+              alt="Flowbite Logo"
+            />
             <div
               className={
                 isAnimating
-                  ? "h-[300px] w-[250px] relative z-0"
-                  : "h-[300px] w-[150px] relative z-0"
+                  ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
+                  : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
               }
             >
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                className="h-full w-full rounded-[25px] bg-cover"
-                alt="Flowbite Logo"
-              />
-              <div
-                className={
-                  isAnimating
-                    ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
-                    : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
-                }
-              >
-                <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
-                  <p className="text-2xl font-bold ">sthn</p>
-                  <p className="">sthn</p>
-                </div>
+              <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
+                <p className="text-2xl font-bold ">sthn</p>
+                <p className="">sthn</p>
               </div>
             </div>
-          </motion.div>
-        </li>
-        <li>
-          <motion.div layout transition={spring} onClick={changeisAnimating}>
+          </div>
+        </motion.div>
+        <motion.div layout transition={spring} onClick={changeisAnimating}>
+          <div
+            className={
+              isAnimating
+                ? "h-[300px] w-[250px] relative z-0"
+                : "h-[300px] w-[150px] relative z-0"
+            }
+          >
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
+              className="h-full w-full rounded-[25px] bg-cover"
+              alt="Flowbite Logo"
+            />
             <div
               className={
                 isAnimating
-                  ? "h-[300px] w-[250px] relative z-0"
-                  : "h-[300px] w-[150px] relative z-0"
+                  ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
+                  : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
               }
             >
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                className="h-full w-full rounded-[25px] bg-cover"
-                alt="Flowbite Logo"
-              />
-              <div
-                className={
-                  isAnimating
-                    ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
-                    : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
-                }
-              >
-                <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
-                  <p className="text-2xl font-bold ">sthn</p>
-                  <p className="">sthn</p>
-                </div>
+              <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
+                <p className="text-2xl font-bold ">sthn</p>
+                <p className="">sthn</p>
               </div>
             </div>
-          </motion.div>
-        </li>
-        <li>
-          <motion.div layout transition={spring} onClick={changeisAnimating}>
-            <div
-              className={
-                isAnimating
-                  ? "h-[300px] w-[250px] relative z-0"
-                  : "h-[300px] w-[150px] relative z-0"
-              }
-            >
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                className="h-full w-full rounded-[25px] bg-cover"
-                alt="Flowbite Logo"
-              />
-              <div
-                className={
-                  isAnimating
-                    ? "absolute text-left w-full h-[25%] pl-5 inset-0 mt-[90%] text-white justify-center items-center bg-black rounded-[15px]"
-                    : "absolute text-left w-full h-full pl-5 inset-0 flex flex-col justify-end items-start z-10 rounded-[25px] text-[#ffffff] bg-black bg-opacity-50"
-                }
-              >
-                <div className={isAnimating ? "" : "rotate-[270deg] mb-5"}>
-                  <p className="text-2xl font-bold ">sthn</p>
-                  <p className="">sthn</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </li>
-      </ul>
-      </div> */}
+          </div>
+        </motion.div>
+      </div>
     </>
   );
 }
