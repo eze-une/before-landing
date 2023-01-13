@@ -53,7 +53,7 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #131622;
+  background: transparent;
   -webkit-border-radius: 1ex;
 }
 
