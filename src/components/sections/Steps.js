@@ -2,7 +2,7 @@ import React from "react";
 import { motion as m, useAnimation } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useEffect } from "react";
-import StepsDetails from "../elements/StepsDetails.tsx";
+import StepsDetails from "../elements/StepsDetails";
 import curvedUnderline from "../../assets/Vector 340.png";
 const boxVariant = {
   visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.5 } },
