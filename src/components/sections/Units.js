@@ -50,138 +50,81 @@ function Units() {
   const [scrollIndex, setscrollIndex] = useState();
   const [scrollColor, setscrollColor] = useState();
   return (
-    <div className="flex flex-col bg-green-400 h-screen w-full">
-      <div className="h-full bg-red-500 w-full flex flex-row">
-        <div className="w-[50%] bg-[#131622] h-full flex  justify-center items-center">
-          <div className="flex flex-col text-[#A7A9B1] space-y-10 text-left text-3xl ">
-            {list.map((item, index2) => (
-              <div className="flex" key={index2}>
-                <div
-                  className={index2 == scrollIndex ? "w-3 mr-5" : "hidden"}
-                  style={{ backgroundColor: scrollColor }}
-                ></div>
-                <p
-                  className={
-                    index2 == scrollIndex
-                      ? "text-white text-5xl font-bold mr-2"
-                      : "hidden"
-                  }
-                >
-                  0{index2 + 1}.{" "}
-                </p>
-                {index2 == scrollIndex ? (
-                  <p
-                    className="text-5xl font-bold"
-                    style={{ color: scrollColor }}
-                  >
-                    {item}
-                  </p>
-                ) : (
-                  <p>{item} </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="w-[50%] bg-gray-300 h-full overflow-y-scroll snapping">
-          {list2.map((item, index) => {
-            return (
+    <m.div className="flex flex-col h-screen bg-blue-400 w-full overflow-y-scroll overscroll-auto z-0 snapping">
+      <m.div className="h-full w-full">
+        {list2.map(({ color, text1, text2, text3 }, index1) => {
+          return (
+            <m.div
+              className="flex flex-row h-full w-full snapper"
+              key={index1}
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: false, amount: 0.7 }}
+              transition={{ staggerChildren: 0.2 }}
+            >
+              <div className="flex flex-col w-[50%] h-full bg-[#131622] space-y-10 text-3xl justify-center items-center text-[#A7A9B1] text-left"></div>
               <m.div
-                initial={"offscreen"}
-                whileInView={"onscreen"}
-                viewport={{ once: false, amount: 0.7 }}
-                key={index}
-                transition={{ staggerChildren: 0.2 }}
-                className="h-full flex flex-col items-center justify-center text-white items-center p-20 snapper"
-                style={{ backgroundColor: item.color }}
+                className="w-[50%] flex flex-col items-center justify-center text-white p-20"
+                whileInView={() => setscrollColor(color)}
+                style={{ backgroundColor: color }}
               >
-                <m.div
+                 <m.div
                   className="flex "
                   variants={textVariant}
-                  whileInView={() => setscrollColor(item.color)}
+                  whileInView={() => setscrollColor(color)}
                 >
                   <div className="h-full w-3 bg-white mr-5"></div>
                   <m.p variants={textVariant} className="text-left ">
-                    {item.text1}
+                    {text1}
                   </m.p>
                 </m.div>
                 <br />
                 <m.p
-                  whileInView={() => setscrollIndex(index)}
+                  whileInView={() => setscrollIndex(index1)}
                   variants={textVariant}
                   className="text-left "
                 >
-                  {item.text2}
+                  {text2}
                 </m.p>
                 <br />
                 <m.p variants={textVariant} className="text-left ">
-                  {item.text3}
+                  {text3}
                 </m.p>
               </m.div>
-            );
-          })}
-        </div>
+              </m.div>
+          );
+        })}
+      </m.div>
+      <div className="absolute text-left text-[#A7A9B1] space-y-10 ml-[10%] mt-[20%] text-3xl">
+        {list.map((item, index2) => (
+          <div className="flex" key={index2}>
+                      <div
+                        className={index2 == scrollIndex ? "w-3 mr-5" : "hidden"}
+                        style={{ backgroundColor: scrollColor }}
+                      ></div>
+                      <p
+                        className={
+                          index2 == scrollIndex
+                            ? "text-white text-5xl font-bold mr-2"
+                            : "hidden"
+                        }
+                      >
+                        0{index2 + 1}.{" "}
+                      </p>
+                      {index2 == scrollIndex ? (
+                        <p
+                          className="text-5xl font-bold"
+                          style={{ color: scrollColor }}
+                        >
+                          {item}
+                        </p>
+                      ) : (
+                        <p>{item} </p>
+                      )}
+                    </div>
+        ))}
       </div>
-    </div>
-
-    // <>
-    //   {list2.map(({ color, text1, text2,text3, }, index1) => {
-    //     return (
-    //       <div className="flex w-full h-screen" key={text1}>
-    //         <div className="h-full w-[50%] bg-[#131622] flex  justify-center items-center  ">
-    //           <div className="flex flex-col text-[#A7A9B1] space-y-10 text-left text-3xl ">
-    //             {list.map((item, index2) => (
-    //               <div className="flex" key={index2}>
-    //                 <div
-    //                   className={index2 == index1 ? "w-3 mr-5" : "hidden"}
-    //                   style={{ backgroundColor: color }}
-    //                 ></div>
-    //                 <p
-    //                   className={
-    //                     index2 == index1
-    //                       ? "text-5xl font-bold mr-2 text-white"
-    //                       : "hidden"
-    //                   }
-    //                 >
-    //                   {" "}
-    //                   0{index2 + 1}.{" "}
-    //                 </p>
-    //                 {/* <p
-    //                   className={
-    //                     index2 == index1 ? "text-5xl font-bold"  : "text-[#A7A9B1]"
-    //                   } */}
-    //                 {/* //   style={{ color: color }} */}
-    //                 {/* > */}
-    //                   {index2==index1? <p className='text-5xl font-bold' style={{ color: color }}>{item} </p>:<p>{item} </p>}
-    //                 {/* </p> */}
-    //               </div>
-    //             ))}
-    //           </div>
-    //         </div>
-    //         <div
-    //           className="h-full flex flex-col w-[50%] items-center justify-center text-white  p-20"
-    //           style={{ backgroundColor: color }}
-    //         >
-    //             <div className='flex '>
-    //                 <div className="h-full w-3 bg-white mr-5    "></div>
-    //             <p className='text-left '>
-    //             {text1}
-    //           </p>
-    //             </div>
-
-    //           <br />
-    //           <p className='text-left '>
-    //             {text2}
-    //           </p>
-    //           <br />
-    //           <p className='text-left '>
-    //             {text3}
-    //           </p>
-    //         </div>
-    //       </div>
-    //     );
-    //   })}
-    // </>
+    </m.div>
   );
 }
 
