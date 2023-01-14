@@ -12,8 +12,8 @@ function BodySection() {
       <div className='flex flex-col items-center justify-center h-full mx-auto'>
         <Hero />  
         <Vision />   
-        {/* <Steps /> */}
-        <SecondSteps /> 
+        <Steps />
+        {/* <SecondSteps />  */}
         <Teams />   
         <Units />
       </div>
