@@ -5,15 +5,15 @@ import RobotHand from "../../assets/Group 1930.png";
 function Hero() {
   return (
     <div className="w-full h-[95vh] flex flex-col md:w-[85%]">
-      <div className=" flex flex-row items-center justify-between ">
+      <div className=" flex flex-row items-center justify-between h-[80%] ">
         {/* left */}
-        <div className="flex flex-col h-full w-[50%] items-start justify-center text-left">
+        <div className="flex flex-col h-full w-[50%] items-start justify-center text-left ">
           <h1 className="text-5xl  text-left text-[56px] font-bold mb-10">
             We build{" "}
             <span className="inline-block">
               <span
                 className=" text-[#E7F0F5]"
-                style={{ "WebkitTextStroke": "1px black" }}
+                style={{ WebkitTextStroke: "1px black" }}
               >
                 crazy
               </span>
@@ -49,7 +49,7 @@ function Hero() {
         </div>
         {/* right */}
         <div className=" w-[50%] h-full">
-          <img src={RobotHand} className="" alt="Flowbite Logo" />
+          <img src={RobotHand} className="h-[100%]" alt="Flowbite Logo" />
         </div>
       </div>
       <div className="">
