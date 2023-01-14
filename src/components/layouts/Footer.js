@@ -66,22 +66,22 @@ function Footer() {
         <div className="flex mb-10 space-x-5">
           <img
             src={Facebook}
-            className="h-20 md:h-15 lg:h-8 "
+            className="h-20 md:h-15 lg:h-7 "
             alt="Flowbite Logo"
           />
           <img
             src={Linkdin}
-            className="h-20 md:h-18 lg:h-8 "
+            className="h-20 md:h-18 lg:h-7 "
             alt="Flowbite Logo"
           />
           <img
             src={Youtube}
-            className="h-20 md:h-10 lg:h-8 "
+            className="h-10 md:h-10 lg:h-7 "
             alt="Flowbite Logo"
           />
           <img
             src={Twitter}
-            className="h-20 md:h-10 lg:h-8 "
+            className="h-20 md:h-10 lg:h-7 "
             alt="Flowbite Logo"
           />
         </div>

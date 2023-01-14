@@ -50,7 +50,7 @@ const row3 = [
 
 function Vision() {
   return (
-    <div className="w-full flex flex-col md:w-[85%] mb-20">
+    <div className="w-full flex flex-col md:w-[85%] mb-20 space-y-8">
       <div className="flex flex-col items-center justify-between text-left">
         <div className="flex bg-[#000000] text-[#FFFFFF] rounded-[25px] p-10">
           <div className=" flex flex-row w-[40%] text-4xl font-bold">
@@ -75,8 +75,9 @@ function Vision() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 pt-20">
-        <div className="h-[300px] w-[300px] flex flex-col justify-center items-start text-left">
+
+      <div className="h-full flex justify-between w-full space-x-10">
+        <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left ">
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
@@ -106,22 +107,22 @@ function Vision() {
             image={row.image}
             top={row.top}
             bottom={row.bottom}
+            className="w-[30%]"
           />
         ))}
-        {/* <VisionDescriptionCard /> */}
       </div>
 
-      <div className="grid grid-cols-1 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 pt-20">
-        
+      <div className="h-full flex justify-between space-x-10">
         {row2.map((row, index) => (
           <VisionImageCard
             key={index}
             image={row.image}
             top={row.top}
             bottom={row.bottom}
+            className="w-[30%]"
           />
         ))}
-        <div className="h-[300px] w-[300px] flex flex-col justify-center items-start text-left">
+        <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left ">
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
@@ -146,23 +147,22 @@ function Vision() {
           </p>
         </div>
       </div>
-      
-      <div className="grid grid-cols-1 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 pt-20">
-        <div className="h-[300px] w-[300px] flex flex-col justify-center items-start text-left">
+      <div className="h-full flex justify-between w-full space-x-10">
+        <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left">
           <p className="text-3xl font-bold">
-            <span className="inline-block">
+            <span className="inline-block w-[45%] ">
               <span
                 className=" text-[#E7F0F5]"
                 style={{ WebkitTextStroke: "1px black" }}
               >
-                Start
+                Monitior
               </span>
               <img
                 src={curvedUnderline}
-                className="w-[70px] h-[21.07px]"
+                className="w-full h-[21.07px]"
                 alt="Flowbite Logo"
               />
-            </span>{" "}
+            </span>
             a project
           </p>
           <p>
@@ -181,7 +181,6 @@ function Vision() {
           />
         ))}
       </div>
-      
     </div>
   );
 }
