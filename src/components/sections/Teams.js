@@ -93,7 +93,7 @@ export default function Teams() {
   const changeisAnimating = () => setisAnimating(!isAnimating);
 
   return (
-    <>
+    <div className="w-full ">
       {/* <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
         <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
         <motion.circle
@@ -105,7 +105,15 @@ export default function Teams() {
           style={{ pathLength: scrollXProgress }}
         />
       </svg> */}
-      <div className="flex flex-row p-20 m-5 overflow-scroll space-x-10 w-full">
+      <div className="flex flex-row w-full mt-10">
+        <div className="h-10 bg-[#57BE94] w-[10%] mr-10"></div>
+        <p className="text-3xl font-bold">Who Helps us to make these true?</p>
+      </div>
+      <div className="flex flex-row p-20 m-5 overflow-scroll space-x-10 w-full h-full justify-center items-center">
+        <div className="flex flex-row w-[300px] h-full text-4xl font-bold text-left ">
+          <div className="bg-[#57BE94] w-10"></div>
+          <p className="">We would like to push the innovative Boundary of technology </p>
+        </div>
         <motion.div layout transition={spring} onClick={changeisAnimating}>
           <div
             className={
@@ -269,7 +277,7 @@ export default function Teams() {
           </div>
         </motion.div>
       </div>
-    </>
+    </div>
   );
 }
 const spring = {
