@@ -4,11 +4,11 @@ import Eyes from "../../assets/Group 1929.png";
 import RobotHand from "../../assets/Group 1930.png";
 function Hero() {
   return (
-    <div className="w-full h-[95vh] flex flex-col md:w-[85%]">
-      <div className=" flex flex-row items-center justify-between h-[80%] ">
+    <div className="w-full w-[95%] h-[95vh] flex flex-col md:w-[80%]">
+      <div className=" flex flex-row items-center justify-between h-[75%] ">
         {/* left */}
-        <div className="flex flex-col h-full w-[50%] items-start justify-center text-left ">
-          <h1 className="text-5xl  text-left text-[56px] font-bold mb-10">
+        <div className="w-full flex flex-col h-full lg:w-[50%] items-start justify-center text-left">
+          <h1 className="text-7xl  text-left text-[56px] font-bold mb-10">
             We build{" "}
             <span className="inline-block">
               <span
@@ -41,14 +41,14 @@ function Hero() {
             </span>
             k imaginatve
           </h1>
-          <h2 className="text-2xl">
+          <h2 className="text-2xl w-full md:w-[80%]">
             The word <span className="text-[#57BE94]">ablaze</span> refers to a{" "}
-            <span className="text-[#FFAE00]">flame</span> <br /> with in a feild
+            <span className="text-[#FFAE00]">flame</span> with in a feild
             of vision
           </h2>
         </div>
         {/* right */}
-        <div className=" w-[50%] h-full">
+        <div className="hidden w-[50%] h-full md:flex items-end justify-end">
           <img src={RobotHand} className="h-[100%]" alt="Flowbite Logo" />
         </div>
       </div>

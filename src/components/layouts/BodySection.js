@@ -9,13 +9,13 @@ import Vision from '../sections/Vision'
 function BodySection() {
   return (
     <div className='w-full'>
-      <div className='flex flex-col items-center justify-center h-full mx-auto'>
+      <div className='flex flex-col items-center justify-center h-full mx-auto snap-y snap-proximity '>
         <Hero />  
-        <Vision />   
-        <Steps />
+        <Vision/>   
+        <Steps  className="snap-center snap-always container"/>
         {/* <SecondSteps />  */}
-        <Teams />   
-        <Units />
+        <Teams  className="snap-always snap-center"/>   
+        <Units className="snap-always snap-center" />
       </div>
     </div>
   )

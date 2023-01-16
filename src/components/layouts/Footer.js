@@ -8,11 +8,11 @@ import Twitter from "../../assets/socials/Group 1934.png";
 function Footer() {
   return (
     <div className="flex flex-col">
-      <div className="flex items-center justify-center text-left p-20">
-        <div className="w-[50%] text-5xl font-bold p-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center text-left lg:p-20">
+        <div className="w-full lg:w-[50%] text-5xl font-bold p-10">
           <p>Do you have an idea that you want to see alive?</p>
         </div>
-        <div className="w-[50%] pr-20">
+        <div className="w-full lg:w-[50%] p-10 lg:pr-20">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -25,8 +25,8 @@ function Footer() {
           </button>
         </div>
       </div>
-      <div className="flex bg-[#131622] items-start justify-around p-20 text-left text-[#D9DBE1]">
-        <div>
+      <div className="flex flex-col lg:flex-row bg-[#131622] lg:items-center justify-center items:center lg:justify-around p-20 text-left text-[#D9DBE1] text-2xl space-y-10">
+        <div className="flex items-center justify-start ">
           <div className="text-center">
             <img
               src={LogoImage}
@@ -37,7 +37,8 @@ function Footer() {
             <p className="text-2xl">Labs</p>
           </div>
         </div>
-        <div>
+        
+        <div >
           <p className="font-bold text-white">Important Links</p>
           <p>About Us</p>
           <p>Sand Box</p>
@@ -66,22 +67,22 @@ function Footer() {
         <div className="flex mb-10 space-x-5">
           <img
             src={Facebook}
-            className="h-20 md:h-15 lg:h-7 "
+            className="h-7 lg:h-7 "
             alt="Flowbite Logo"
           />
           <img
             src={Linkdin}
-            className="h-20 md:h-18 lg:h-7 "
+            className="h-7 lg:h-7 "
             alt="Flowbite Logo"
           />
           <img
             src={Youtube}
-            className="h-10 md:h-10 lg:h-7 "
+            className="h-7 lg:h-7 "
             alt="Flowbite Logo"
           />
           <img
             src={Twitter}
-            className="h-20 md:h-10 lg:h-7 "
+            className="h-7 lg:h-7 "
             alt="Flowbite Logo"
           />
         </div>

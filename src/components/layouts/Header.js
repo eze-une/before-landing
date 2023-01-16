@@ -1,5 +1,5 @@
 import React from "react";
-import LogoImage from "../../assets/Group 1901.png";
+import LogoImage from "../../assets/Group 1894.png";
 import MenuImage from "../../assets/Frame 1893.png";
 function Header() {
   return (
@@ -66,14 +66,21 @@ function Header() {
     //     </div>
     //   </div>
     // </nav>
-    <nav className=" py-2.5 lg:py-4 ">
-      <div className=" w-[85%] flex flex-wrap items-center justify-between mx-auto">
+    // <nav className=" py-2.5 lg:py-4 overflow-hidden">
+    <div className="w-[95%]  lg:w-[80%] flex flex-row items-center justify-between mx-auto py-5 overflow-hidden ">
+      <div className="flex items-center ">
         <img
           src={LogoImage}
-          className="h-7 md:h-9 lg:h-15 "
+          className="h-full h-10 lg:h-30 "
           alt="Flowbite Logo"
         />
-        <button
+        <div className="flex flex-col ml-5 text-right">
+          <p className="font-bold text-1xl">Ablaze</p>
+          <p>Labs</p>
+        </div>
+      </div>
+
+      {/* <button
           data-collapse-toggle="navbar-default"
           type="button"
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -82,19 +89,20 @@ function Header() {
         >
           <span className="sr-only">Open main menu</span>
           <img src={MenuImage} className="w-3 h-3" alt="Flowbite Logo" />
-        </button>
-        <div
-          className="hidden w-full md:block md:w-auto "
-          id="navbar-default"
-        >
-          <img
-            src={MenuImage}
-            className="h-6 sm:h-5 lg:h-5"
-            alt="Flowbite Logo"
-          />
-        </div>
+        </button> */}
+      <div
+        className=" md:block md:w-auto "
+        id="navbar-default"
+      >
+        <img
+          src={MenuImage}
+          className="h-6 sm:h-5 lg:h-5"
+          alt="Flowbite Logo"
+        />
+        {/* <p>serg</p> */}
       </div>
- </nav>
+    </div>
+    //  </nav>
   );
 }
 

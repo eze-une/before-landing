@@ -50,19 +50,19 @@ const row3 = [
 
 function Vision() {
   return (
-    <div className="w-full flex flex-col md:w-[85%] mb-20 space-y-8">
-      <div className="flex flex-col items-center justify-between text-left">
-        <div className="flex bg-[#000000] text-[#FFFFFF] rounded-[25px] p-10">
-          <div className=" flex flex-row w-[40%] text-4xl font-bold">
-            <div className="h-full w-2 mr-5 bg-green-300"></div>
-            <p>
-              Our <span className="text-[#57BE94]">vision</span> <br /> lean{" "}
-              <br /> towards
+    <div className="w-full flex flex-col md:w-[80%] mb-20 space-y-8">
+      <div className="flex flex-col items-center justify-between text-left ">
+        <div className="flex flex-col justify-center items-center lg:justify-start h-[100vh] lg:h-full lg:text-1xl px-10 py-10 space-y-10 lg:space-y-5 lg:flex-row bg-[#000000] text-[#FFFFFF] rounded-0 md:rounded-[25px]">
+          <div className="w-full  flex flex-row lg:w-[40%] text-4xl font-bold items-center ">
+            <div className="h-full lg:h-[80%] w-2 mr-5 bg-[#57BE94]"></div>
+            <p className="text-5xl">
+              Our <span className="text-[#57BE94]">vision</span> lean{" "}
+              towards
             </p>
           </div>
-          <div className="w-[60%] flex flex-col">
+          <div className="w-full text-1xl lg:text-1xl lg:w-[60%] flex flex-col space-y-10 lg:space-y-0 items-center ">
             <p>
-              creating several businesses from scratch using our own in-house
+              creating several businesses from <span className="text-[#57BE94]">scratch</span> using our own in-house
               technical and business teams as well as special operational and
               management methodologies.
             </p>{" "}
@@ -75,8 +75,8 @@ function Vision() {
           </div>
         </div>
       </div>
-
-      <div className="h-full flex justify-between w-full space-x-10">
+      
+      <div className="hidden h-full md:flex justify-between w-full space-x-10">
         <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left ">
           <p className="text-3xl font-bold">
             <span className="inline-block">
@@ -111,8 +111,44 @@ function Vision() {
           />
         ))}
       </div>
+        
+      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto">
+        <div className="w-[80%] md:w-full flex flex-col justify-center items-start text-left ">
+          <p className="text-3xl font-bold">
+            <span className="inline-block">
+              <span
+                className=" text-[#E7F0F5]"
+                style={{ WebkitTextStroke: "1px black" }}
+              >
+                Start
+              </span>
+              <img
+                src={curvedUnderline}
+                className="w-[70px] h-[21.07px]"
+                alt="Flowbite Logo"
+              />
+            </span>{" "}
+            a project
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        {row1.map((row, index) => (
+          <VisionImageCard
+            key={index}
+            image={row.image}
+            top={row.top}
+            bottom={row.bottom}
+            className="w-full"
+          />
+        ))}
+      </div>
 
-      <div className="h-full flex justify-between space-x-10">
+      <div className="hidden h-full md:flex justify-between space-x-10">
         {row2.map((row, index) => (
           <VisionImageCard
             key={index}
@@ -147,8 +183,80 @@ function Vision() {
           </p>
         </div>
       </div>
-      <div className="h-full flex justify-between w-full space-x-10">
+
+      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto">
+      <div className="w-[80%] md:w-full flex flex-col justify-center items-start text-left ">
+          <p className="text-3xl font-bold">
+            <span className="inline-block">
+              <span
+                className=" text-[#E7F0F5]"
+                style={{ WebkitTextStroke: "1px black" }}
+              >   
+                Scale
+              </span>
+              <img
+                src={curvedUnderline}
+                className="w-[70px] h-[21.07px]"
+                alt="Flowbite Logo"
+              />
+            </span>{" "}
+            a project
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        {row2.map((row, index) => (
+          <VisionImageCard
+            key={index}
+            image={row.image}
+            top={row.top}
+            bottom={row.bottom}
+            className="w-[30%]"
+          />
+        ))}
+        
+      </div>
+      <div className="hidden h-full md:flex hidden justify-between w-full space-x-10">
         <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left">
+          <p className="text-3xl font-bold">
+            <span className="inline-block w-[45%] ">
+              <span
+                className=" text-[#E7F0F5]"
+                style={{ WebkitTextStroke: "1px black" }}
+              >
+                Monitior
+              </span>
+              <img
+                src={curvedUnderline}
+                className="w-full h-[21.07px]"
+                alt="Flowbite Logo"
+              />
+            </span>
+            a project
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        {row3.map((row, index) => (
+          <VisionImageCard
+            key={index}
+            image={row.image}
+            top={row.top}
+            bottom={row.bottom}
+          />
+        ))}
+      </div>
+
+      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto">
+        <div className="w-[80%] md:w-full flex flex-col justify-center items-start text-left ">
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span

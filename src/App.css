@@ -1,5 +1,5 @@
-.body {
-  overflow:hidden;
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .App {
@@ -47,7 +47,7 @@
   }
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
   background: transparent;
@@ -55,5 +55,36 @@
 ::-webkit-scrollbar-thumb {
   background: transparent;
   -webkit-border-radius: 1ex;
+} */
+
+.parent {
+  contain: content;
 }
 
+.child {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.transf{
+  /* transform: translate(-100%); */
+  background-color: bisque;
+}
+.help{
+  backface-visibility: hidden
+}
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.container{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.snapped{
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  aspect-ratio: 4/1;
+}
