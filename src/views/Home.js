@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <div className="bg-[#E7F0F5] scrollbar snap-y snap-mandatory">
-        <Header />
+        {/* <Header /> */}
         <BodySection />
         <Footer />
       </div>
