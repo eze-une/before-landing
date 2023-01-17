@@ -50,7 +50,7 @@ const row3 = [
 
 function Vision() {
   return (
-    <div className="w-full flex flex-col md:w-[80%] mb-20 space-y-8">
+    <div className="w-full flex flex-col md:w-[80%] mb-20 space-y-8 snap-nm">
       <div className="flex flex-col items-center justify-between text-left ">
         <div className="flex flex-col justify-center items-center lg:justify-start h-[100vh] lg:h-full lg:text-1xl px-10 py-10 space-y-10 lg:space-y-5 lg:flex-row bg-[#000000] text-[#FFFFFF] rounded-0 md:rounded-[25px]">
           <div className="w-full  flex flex-row lg:w-[40%] text-4xl font-bold items-center ">
@@ -82,15 +82,24 @@ function Vision() {
             <span className="inline-block">
               <span
                 className=" text-[#E7F0F5]"
-                style={{ WebkitTextStroke: "1px black" }}
+                style={{ WebkitTextStroke: "1px #57BE94" }}
               >
                 Start
               </span>
-              <img
-                src={curvedUnderline}
-                className="w-[70px] h-[21.07px]"
-                alt="Flowbite Logo"
-              />
+              <svg
+                width="70px"
+                height="21.07px"
+                viewBox="0 0 91 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"
+                  stroke="#57BE94"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+              </svg>
             </span>{" "}
             a project
           </p>
@@ -113,20 +122,29 @@ function Vision() {
       </div>
         
       <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto">
-        <div className="w-[80%] md:w-full flex flex-col justify-center items-start text-left ">
+        <div className="w-[80%] md:w-full flex flex-col justify-center items-start text-left mt-10 lg:mt-0">
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
                 className=" text-[#E7F0F5]"
-                style={{ WebkitTextStroke: "1px black" }}
+                style={{ WebkitTextStroke: "1px #57BE94" }}
               >
                 Start
               </span>
-              <img
-                src={curvedUnderline}
-                className="w-[70px] h-[21.07px]"
-                alt="Flowbite Logo"
-              />
+              <svg
+                width="70px"
+                height="21.07px"
+                viewBox="0 0 91 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"
+                  stroke="#57BE94"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+              </svg>
             </span>{" "}
             a project
           </p>
@@ -163,15 +181,24 @@ function Vision() {
             <span className="inline-block">
               <span
                 className=" text-[#E7F0F5]"
-                style={{ WebkitTextStroke: "1px black" }}
+                style={{ WebkitTextStroke: "1px #FFAE00" }}
               >
                 Scale
               </span>
-              <img
-                src={curvedUnderline}
-                className="w-[70px] h-[21.07px]"
-                alt="Flowbite Logo"
-              />
+              <svg
+                width="70px"
+                height="21.07px"
+                viewBox="0 0 91 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"
+                  stroke="#FFAE00"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+              </svg>
             </span>{" "}
             a project
           </p>
@@ -190,15 +217,24 @@ function Vision() {
             <span className="inline-block">
               <span
                 className=" text-[#E7F0F5]"
-                style={{ WebkitTextStroke: "1px black" }}
+                style={{ WebkitTextStroke: "1px #FFAE00" }}
               >   
                 Scale
               </span>
-              <img
-                src={curvedUnderline}
-                className="w-[70px] h-[21.07px]"
-                alt="Flowbite Logo"
-              />
+              <svg
+                width="70px"
+                height="21.07px"
+                viewBox="0 0 91 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"
+                  stroke="#FFAE00"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+              </svg>
             </span>{" "}
             a project
           </p>
@@ -225,18 +261,27 @@ function Vision() {
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span
-                className=" text-[#E7F0F5]"
-                style={{ WebkitTextStroke: "1px black" }}
+                className=" text-[#E7F0F5] mr-5"
+                style={{ WebkitTextStroke: "1px #4F66AF" }}
               >
-                Monitior
+                Monitior {" "}
               </span>
-              <img
-                src={curvedUnderline}
-                className="w-full h-[21.07px]"
-                alt="Flowbite Logo"
-              />
+              <svg
+                width="full"
+                height="21.07px"
+                viewBox="0 0 91 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"
+                  stroke="#4F66AF"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+              </svg>
             </span>
-            a project
+            {" "}a project
           </p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -260,18 +305,27 @@ function Vision() {
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span
-                className=" text-[#E7F0F5]"
-                style={{ WebkitTextStroke: "1px black" }}
+                className=" text-[#E7F0F5] mr-5"
+                style={{ WebkitTextStroke: "1px #4F66AF" }}
               >
                 Monitior
               </span>
-              <img
-                src={curvedUnderline}
-                className="w-full h-[21.07px]"
-                alt="Flowbite Logo"
-              />
+              <svg
+                width="full"
+                height="21.07px"
+                viewBox="0 0 91 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"
+                  stroke="#4F66AF"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+              </svg>
             </span>
-            a project
+             {"  "} {"  "} a project
           </p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
