@@ -286,9 +286,9 @@ export default function Teams() {
     //     </motion.div>
     //   </div>
     // </div>c:\Users\Ezana\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
-    <div className="flex flex-col w-full py-10">
+    <div className="flex flex-col w-full py-10 snapped">
       <div className="flex flex-row ">
-        <div className="h-10 w-5 bg-[#57BE94] w-[5%] mr-10"></div>
+        <div className="h-10 w-5 bg-[#57BE94] w-[10%] lg:w-[17%] mr-10"></div>
         <p className="text-3xl text-left font-bold">Who Help us to make these true?</p>
       </div>
 

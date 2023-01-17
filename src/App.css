@@ -2,6 +2,8 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+html {scroll-snap-type: y proximity}
+
 .App {
   text-align: center;
 }
@@ -47,16 +49,6 @@ body::-webkit-scrollbar {
   }
 }
 
-/* ::-webkit-scrollbar {
-  height: 5px;
-  width: 5px;
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: transparent;
-  -webkit-border-radius: 1ex;
-} */
-
 .parent {
   contain: content;
 }
@@ -65,14 +57,6 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 0;
   left: 0;
-}
-
-.transf{
-  /* transform: translate(-100%); */
-  background-color: bisque;
-}
-.help{
-  backface-visibility: hidden
 }
 .scrollbar::-webkit-scrollbar {
   display: none;
@@ -87,4 +71,18 @@ body::-webkit-scrollbar {
   scroll-snap-align: center;
   scroll-snap-stop: always;
   aspect-ratio: 4/1;
+}
+
+.snap-normal{
+  scroll-snap-align: start;
+  scroll-snap-stop: start;
+  aspect-ratio: 1/1;
+}
+.snap-nm{
+  scroll-snap-align:  start end;
+  scroll-snap-stop: normal;
+}
+.snao-end{
+  scroll-snap-align:   end;
+  scroll-snap-stop: normal;
 }

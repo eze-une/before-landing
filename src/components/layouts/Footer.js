@@ -7,7 +7,7 @@ import Twitter from "../../assets/socials/Group 1934.png";
 
 function Footer() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col snap-end">
       <div className="flex flex-col lg:flex-row items-center justify-center text-left lg:p-20">
         <div className="w-full lg:w-[50%] text-5xl font-bold p-10">
           <p>Do you have an idea that you want to see alive?</p>

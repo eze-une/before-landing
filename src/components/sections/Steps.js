@@ -70,7 +70,7 @@ function Steps() {
   const [scrollIndex, setscrollIndex] = useState();
   const [scrollColor, setscrollColor] = useState();
   return (
-    <m.div className="flex flex-col h-screen bg-blue-400 w-full overflow-y-scroll overscroll-auto z-0  scrollbar snap-y snap-mandatory snapped">
+    <m.div className="flex flex-col h-screen bg-blue-400 w-full overflow-y-scroll overscroll-auto z-0  scrollbar snapping  snapped">
       <m.div className="h-full w-full">
         {list2.map(({ color, text1, text2, highlitedText }, index1) => {
           return (
