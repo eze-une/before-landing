@@ -2,9 +2,13 @@ import React from "react";
 import curvedUnderline from "../../assets/Vector 336.png";
 import Eyes from "../../assets/Group 1929.png";
 import RobotHand from "../../assets/Group 1930.png";
+import Header from "../layouts/Header";
+import { ReactComponent as curvedLine } from "../../assets/Vector 347.svg";
+
 function Hero() {
   return (
-    <div className="w-full w-[95%] h-[95vh] flex flex-col md:w-[80%]">
+    <div className="w-full w-[95%] h-[95vh] flex flex-col md:w-[80%] snap-normal">
+      <Header />
       <div className=" flex flex-row items-center justify-between h-[75%] ">
         {/* left */}
         <div className="w-full flex flex-col h-full lg:w-[50%] items-start justify-center text-left">

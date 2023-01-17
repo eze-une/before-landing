@@ -67,7 +67,7 @@ function Header() {
     //   </div>
     // </nav>
     // <nav className=" py-2.5 lg:py-4 overflow-hidden">
-    <div className="w-[95%]  lg:w-[80%] flex flex-row items-center justify-between mx-auto py-5 overflow-hidden ">
+    <div className="w-full flex flex-row items-center justify-between mx-auto py-5 overflow-hidden">
       <div className="flex items-center ">
         <img
           src={LogoImage}
