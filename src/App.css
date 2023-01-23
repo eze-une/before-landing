@@ -1,8 +1,10 @@
 body::-webkit-scrollbar {
   display: none;
 }
-
-html {scroll-snap-type: y proximity}
+body{
+ background-color: #FFFFFF;
+}
+html {scroll-snap-type: y mandatory}
 
 .App {
   text-align: center;
@@ -85,4 +87,35 @@ html {scroll-snap-type: y proximity}
 .snao-end{
   scroll-snap-align:   end;
   scroll-snap-stop: normal;
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 30px;
+  border-radius: 25px;  
+  background: transparent;
+  outline:auto #57BE94 ;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
 }

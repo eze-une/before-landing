@@ -54,7 +54,7 @@ function Units() {
   const textLineStart = useRef(null);
   return (
     <>
-      <div className="flex  flex-col h-[100vh] lg:h-[70vh] w-full space-y-20 lg:space-y-0 bg-[#E7F0F5]">
+      <div className="flex  flex-col h-[100vh] lg:h-[70vh] w-full space-y-20 lg:space-y-0 bg-[#E7F0F5] snapped">
         <div className="w-full flex justify-start items-start text-left">
           <div className="lg:w-[17%] w-[10%] h-full bg-orange-600 mr-10"></div>
           <p className="font-bold text-3xl">How Do We Make This True?</p>
