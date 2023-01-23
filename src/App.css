@@ -4,7 +4,7 @@ body::-webkit-scrollbar {
 body{
  background-color: #FFFFFF;
 }
-html {scroll-snap-type: y mandatory}
+html {scroll-snap-type: y proximity}
 
 .App {
   text-align: center;
@@ -85,7 +85,7 @@ html {scroll-snap-type: y mandatory}
   scroll-snap-stop: normal;
 }
 .snao-end{
-  scroll-snap-align:   end;
+  scroll-snap-align:  start end;
   scroll-snap-stop: normal;
 }
 
