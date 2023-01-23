@@ -6,8 +6,7 @@ import Header from "../components/layouts/Header";
 function Home() {
   return (
     <>
-      <div className="bg-[#E7F0F5] scrollbar snap-y snap-mandatory">
-        {/* <Header /> */}
+      <div className=" scrollbar snap-y snap-mandatory">
         <BodySection />
         <Footer />
       </div>

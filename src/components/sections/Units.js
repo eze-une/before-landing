@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import curvedUnderline from "../../assets/Vector 340.png";
 import { motion as m } from "framer-motion";
 import Xarrow from "react-xarrows";
-import { ReactComponent as curvedLine } from "../../assets/Vector 347.svg";
 
 const list = ["LABS", "ENGINEERING", "SANDBOX"];
 const list2 = [
@@ -55,7 +54,7 @@ function Units() {
   const textLineStart = useRef(null);
   return (
     <>
-      <div className="flex  flex-col h-[100vh] lg:h-[70vh] w-full space-y-20 lg:space-y-0">
+      <div className="flex  flex-col h-[100vh] lg:h-[70vh] w-full space-y-20 lg:space-y-0 bg-[#E7F0F5]">
         <div className="w-full flex justify-start items-start text-left">
           <div className="lg:w-[17%] w-[10%] h-full bg-orange-600 mr-10"></div>
           <p className="font-bold text-3xl">How Do We Make This True?</p>
@@ -65,15 +64,14 @@ function Units() {
             These Are The{" "}
             <span className="inline-block" >
               <span
-                className=" text-[#E7F0F5]"
+                className=" text-transparent"
                 style={{ WebkitTextStroke: "1px black" }}
               >
                 Units
               </span>
-              <curvedLine />
 
               <svg
-                width="91"
+                width="full"
                 height="15"
                 viewBox="0 0 91 15"
                 fill="none"

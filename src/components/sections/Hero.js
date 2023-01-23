@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import curvedUnderline from "../../assets/Vector 336.png";
 import Eyes from "../../assets/Group 1929.png";
 import RobotHand from "../../assets/Group 1930.png";
 import Header from "../layouts/Header";
-import { ReactComponent as curvedLine } from "../../assets/Vector 347.svg";
 
-function Hero() {
+function Hero({sliderRange,setsliderRange}) {
+  // const [sliderRange, setsliderRange] = useState(20);
+  // console.log({sliderRange});
+  if(sliderRange==80){
+    
+  }
   return (
-    <div className="w-full w-[95%] h-[95vh] flex flex-col md:w-[80%] snap-normal">
+    <div className="bg-[#E7F0F5] w-full w-[95%] h-[100vh] flex flex-col md:w-[80%] snap-normal">
       <Header />
       <div className=" flex flex-row items-center justify-between h-[75%] ">
         {/* left */}
@@ -47,8 +51,8 @@ function Hero() {
           </h1>
           <h2 className="text-2xl w-full md:w-[80%]">
             The word <span className="text-[#57BE94]">ablaze</span> refers to a{" "}
-            <span className="text-[#FFAE00]">flame</span> with in a feild
-            of vision
+            <span className="text-[#FFAE00]">flame</span> with in a feild of
+            vision
           </h2>
         </div>
         {/* right */}
@@ -56,9 +60,11 @@ function Hero() {
           <img src={RobotHand} className="h-[100%]" alt="Flowbite Logo" />
         </div>
       </div>
-      <div className="">
-        {/* <section className="bg-green-300  rounded h-5 w-5"></section> */}
-        Explore more
+      <div className="flex flex-col items-center justify-center text-center m-2">
+        <div className="rotate-[90deg]  h-[60px] w-[60px] items-center justify-center ">
+          <input type="range" className="slider " min="1" max="100" value={sliderRange} onChange={e => setsliderRange (e.target.value)}/>
+        </div>
+        <p className="text-[#57BE94] ml-5">EXPLORE MORE</p>
       </div>
     </div>
   );

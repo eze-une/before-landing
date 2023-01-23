@@ -25,20 +25,21 @@ function Footer() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row bg-[#131622] lg:items-center justify-center items:center lg:justify-around p-20 text-left text-[#D9DBE1] text-2xl space-y-10">
-        <div className="flex items-center justify-start ">
-          <div className="text-center">
-            <img
-              src={LogoImage}
-              className="h-20 md:h-15 lg:h-15 "
-              alt="Flowbite Logo"
-            />
+
+
+      <div className="flex flex-col  lg:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start  p-20 text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0">
+       
+        <div className="flex flex-col   text-right">
+              <img
+                src={LogoImage}
+                className="h-20 md:h-15 lg:h-20 "
+                alt="Flowbite Logo"
+              />
             <p className="font-bold text-2xl text-white">Ablaze</p>
             <p className="text-2xl">Labs</p>
-          </div>
         </div>
-        
-        <div >
+
+        <div className="flex flex-col ">
           <p className="font-bold text-white">Important Links</p>
           <p>About Us</p>
           <p>Sand Box</p>
@@ -54,9 +55,19 @@ function Footer() {
           <p>Privacy Policy</p>
           <p>Events</p>
         </div>
-        <div className="font-bold text-white">
+        <div className=" flex flex-col font-bold text-white ">
           <p>Subscribe to our newsletter!</p>
-          <textfeild />
+          <div className="flex flex-row items-center">
+            <input
+              type="text"
+              className="mt-1 block w-full px-3 py-2 bg-[#D9D9D9] bg-opacity-[20%]  rounded-[12px] text-sm shadow-sm placeholder-slate-400
+      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 h-[54px]"
+              placeholder="Email"
+            />
+            <button className="bg-[#57BE94] h-[45px] rounded-[12px] text-md font-normal text-sm px-10 z-20  ml-[-130px] mt-[5px]">
+              Submit
+            </button>
+          </div>
         </div>
       </div>
       <div className="flex bg-[#131622] text-white items-start justify-between text-left px-20">
@@ -65,26 +76,10 @@ function Footer() {
           right reserved 2023
         </p>
         <div className="flex mb-10 space-x-5">
-          <img
-            src={Facebook}
-            className="h-7 lg:h-7 "
-            alt="Flowbite Logo"
-          />
-          <img
-            src={Linkdin}
-            className="h-7 lg:h-7 "
-            alt="Flowbite Logo"
-          />
-          <img
-            src={Youtube}
-            className="h-7 lg:h-7 "
-            alt="Flowbite Logo"
-          />
-          <img
-            src={Twitter}
-            className="h-7 lg:h-7 "
-            alt="Flowbite Logo"
-          />
+          <img src={Facebook} className="h-7 lg:h-7 " alt="Flowbite Logo" />
+          <img src={Linkdin} className="h-7 lg:h-7 " alt="Flowbite Logo" />
+          <img src={Youtube} className="h-7 lg:h-7 " alt="Flowbite Logo" />
+          <img src={Twitter} className="h-7 lg:h-7 " alt="Flowbite Logo" />
         </div>
       </div>
     </div>
