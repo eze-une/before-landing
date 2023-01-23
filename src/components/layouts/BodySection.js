@@ -9,13 +9,13 @@ import Vision from '../sections/Vision'
 function BodySection() {
   const [sliderRange, setsliderRange] = useState(20);
   const myref = useRef();
-
-  console.log({sliderRange})
-  // console.log("ref",{myref})
   
   useEffect(() => {
     if(sliderRange>=80){
-      myref.current?.scrollIntoView();
+      window.scrollTo({
+        top: myref.current.offsetTop,
+        behavior: 'smooth',
+      });
       setsliderRange(10);
     }
   }, [sliderRange])
@@ -35,5 +35,7 @@ function BodySection() {
     </div>
   )
 }
+
+
 
 export default BodySection
