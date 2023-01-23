@@ -5,11 +5,6 @@ import RobotHand from "../../assets/Group 1930.png";
 import Header from "../layouts/Header";
 
 function Hero({sliderRange,setsliderRange}) {
-  // const [sliderRange, setsliderRange] = useState(20);
-  // console.log({sliderRange});
-  if(sliderRange==80){
-    
-  }
   return (
     <div className="bg-[#E7F0F5] w-full w-[95%] h-[100vh] flex flex-col md:w-[80%] snap-normal">
       <Header />
