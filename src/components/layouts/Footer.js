@@ -29,7 +29,7 @@ function Footer() {
 
       <div className="flex flex-col  lg:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start  p-20 text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0">
        
-        <div className="flex flex-col  lg:text-right text-center w-[50%] lg:w-full ">
+        <div className="flex flex-col  lg:text-right text-center">
               <img
                 src={LogoImage}
                 className="h-20 md:h-15 lg:h-20"
