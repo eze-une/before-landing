@@ -7,19 +7,27 @@ import { motion as m } from "framer-motion";
 
 const showside = {
   opacity: 1,
-  x: 0,
+  // x: 0,
   display: "block",
 };
 
 const hide = {
   opacity: 0,
-  x: 100,
+  // x: 100,
   transitionEnd: {
     display: "none",
   },
 };
+const hideMenu={
+  // opacity: 0,
+  // x:100,
+  transitionEnd: {
+    display: "none",
+  },
+}
 const showMenu={
   opacity: 1,
+  x:0,
   display: "block",
 }
 function Header() {
@@ -38,8 +46,8 @@ function Header() {
         </div>
       </div>
       <m.div
-        animate={show ? hide : showMenu}
-        className="md:block md:w-auto hover:cursor-pointer"
+        animate={show ? hideMenu : showMenu}
+        className="md:block md:w-auto  hover:cursor-pointer"
       >
         <GrMenu
           className="h-6 sm:h-5 lg:h-5 text-5xl font-bold text-black"
@@ -48,6 +56,7 @@ function Header() {
       </m.div>
 
       {/* sidebar */}
+      <div className={show?"flex":"hidden"}>
       <m.div
         animate={show ? showside : hide}
         className="z-10 absolute right-0 top-0 h-full w-full  md:h-[100vh] md:w-[30%] bg-white sidebar"
@@ -96,6 +105,7 @@ function Header() {
           </m.div>
         </m.div>
       </m.div>
+      </div>
     </div>
   );
 }
