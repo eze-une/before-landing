@@ -4,7 +4,7 @@ body::-webkit-scrollbar {
 body{
  background-color: #FFFFFF;
 }
-html {scroll-snap-type: y proximity}
+html {scroll-snap-type: y mandatory}
 
 .App {
   text-align: center;
@@ -112,10 +112,51 @@ html {scroll-snap-type: y proximity}
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  cursor: pointer;
 }
 
+
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background: #04AA6D;
   cursor: pointer;
+}
+
+
+
+.item{
+  height: 25rem;
+  min-width: 15rem;
+  padding: 10px;
+}
+.item-click{
+  height: 25rem;
+  min-width: 20rem;
+  padding: 10px;
+}
+.item-click img{
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.item img{
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  /* opacity: 0.2;  */
+  /* background-color: #000000; */
+  /* background: rgba(0, 0, 0, ); */
+}
+.inner-carousel{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.carousel{
+cursor: grab;
+margin-top: 1rem;
+margin-bottom: 3rem;
+overflow: hidden;
+}
+.sidebar{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }

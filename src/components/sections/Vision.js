@@ -51,11 +51,11 @@ const row3 = [
 function Vision({myref}) {
   // console.log({myref});
   return (
-    <div className="w-full flex flex-col md:w-[80%] mb-20  lg:pt-20 space-y-8 snap-nm lg:mt-20" ref={myref}>
+    <div className="w-full flex flex-col md:w-[80%] mb-20  lg:pt-20 space-y-8 snap-nm lg:mt-20" ref={myref} id="vision">
       <div className="flex flex-col items-center justify-between text-left ">
         <div className="flex flex-col justify-center items-center lg:justify-start h-[100vh] lg:h-full lg:text-1xl px-10 py-10 space-y-10 lg:space-y-5 lg:flex-row bg-[#000000] text-[#FFFFFF] rounded-0 md:rounded-[25px]">
-          <div className=" flex  w-full lg:w-[40%] text-4xl font-bold items-center">
-            <div className=" w-5 w-2 mr-5 bg-[#57BE94]"></div>
+          <div className=" flex h-full w-full lg:w-[40%] text-4xl font-bold items-center">
+            <div className=" w-5 w-3 h-[90px] mr-5 bg-[#57BE94]"></div>
             <p className="text-5xl">
               Our <span className="text-[#57BE94]">vision</span> lean{" "}
               towards

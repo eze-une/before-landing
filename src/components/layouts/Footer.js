@@ -7,7 +7,7 @@ import Twitter from "../../assets/socials/Group 1934.png";
 
 function Footer() {
   return (
-    <div className="flex flex-col snap-end">
+    <div className="flex flex-col snap-end" id="footer">
       <div className="flex flex-col lg:flex-row items-center justify-center text-left lg:p-20">
         <div className="w-full lg:w-[50%] text-5xl font-bold p-10">
           <p>Do you have an idea that you want to see alive?</p>
@@ -29,10 +29,10 @@ function Footer() {
 
       <div className="flex flex-col  lg:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start  p-20 text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0">
        
-        <div className="flex flex-col  lg:text-right text-center">
+        <div className="flex flex-col  lg:text-right text-center w-[30%] md:w-[7%]">
               <img
                 src={LogoImage}
-                className="h-20 md:h-15 lg:h-20"
+                className="h-20  md:h-15 lg:h-20"
                 alt="Flowbite Logo"
               />
             <p className="font-bold text-2xl text-white">Ablaze</p>

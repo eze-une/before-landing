@@ -6,7 +6,7 @@ import Header from "../layouts/Header";
 
 function Hero({sliderRange,setsliderRange}) {
   return (
-    <div className="bg-[#E7F0F5] w-full w-[95%] h-[100vh] flex flex-col md:w-[80%] snap-normal">
+    <div className="bg-[#E7F0F5] w-full w-[95%] h-[100vh] flex flex-col md:w-[80%] snap-normal" id="hero">
       <Header />
       <div className=" flex flex-row items-center justify-between h-[75%] ">
         {/* left */}
@@ -44,7 +44,7 @@ function Hero({sliderRange,setsliderRange}) {
             </span>
             k imaginatve
           </h1>
-          <h2 className="text-2xl w-full md:w-[80%]">
+          <h2 className="  w-full md:w-[80%]">
             The word <span className="text-[#57BE94]">ablaze</span> refers to a{" "}
             <span className="text-[#FFAE00]">flame</span> with in a feild of
             vision
