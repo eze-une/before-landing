@@ -1,10 +1,12 @@
 body::-webkit-scrollbar {
   display: none;
 }
-body{
- background-color: #FFFFFF;
+body {
+  background-color: #ffffff;
 }
-html {scroll-snap-type: y mandatory}
+html {
+  scroll-snap-type: y mandatory;
+}
 
 .App {
   text-align: center;
@@ -39,7 +41,7 @@ html {scroll-snap-type: y mandatory}
 .snapping {
   scroll-snap-type: y mandatory;
 }
-.snapper{
+.snapper {
   scroll-snap-align: center;
 }
 @keyframes App-logo-spin {
@@ -64,42 +66,41 @@ html {scroll-snap-type: y mandatory}
   display: none;
 }
 
-.container{
+.container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
-.snapped{
+.snapped {
   scroll-snap-align: center;
   scroll-snap-stop: always;
   aspect-ratio: 4/1;
 }
 
-.snap-normal{
+.snap-normal {
   scroll-snap-align: start;
   scroll-snap-stop: start;
   aspect-ratio: 1/1;
 }
-.snap-nm{
-  scroll-snap-align:  start end;
+.snap-nm {
+  scroll-snap-align: start end;
   scroll-snap-stop: normal;
 }
-.snao-end{
-  scroll-snap-align:  start end;
+.snao-end {
+  scroll-snap-align: start end;
   scroll-snap-stop: normal;
 }
-
 
 .slider {
   -webkit-appearance: none;
   width: 100%;
   height: 30px;
-  border-radius: 25px;  
+  border-radius: 25px;
   background: transparent;
-  outline:auto #57BE94 ;
+  outline: auto #57be94;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 .slider::-webkit-slider-thumb {
@@ -107,38 +108,36 @@ html {scroll-snap-type: y mandatory}
   appearance: none;
   width: 25px;
   height: 25px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
 }
-
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #04AA6D;
+  background: #04aa6d;
   cursor: pointer;
 }
 
-
-
-.item{
+.item {
   height: 25rem;
   min-width: 15rem;
   padding: 10px;
 }
-.item-click{
+.item-click {
   height: 25rem;
   min-width: 20rem;
   padding: 10px;
 }
-.item-click img{
+.item-click img {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
 }
-.item img{
+.item img {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -146,17 +145,81 @@ html {scroll-snap-type: y mandatory}
   /* background-color: #000000; */
   /* background: rgba(0, 0, 0, ); */
 }
-.inner-carousel{
+.inner-carousel {
   display: flex;
   justify-items: center;
   align-items: center;
 }
-.carousel{
-cursor: grab;
-margin-top: 1rem;
-margin-bottom: 3rem;
-overflow: hidden;
+.carousel {
+  cursor: grab;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
 }
-.sidebar{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+.sidebar {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.pseudo-text-effect {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.5s;
+  display: block;
+}
+.pseudo-text-effect::after {
+  content: attr(data-after);
+  display: inline-block;
+  transform: translateY(100%);
+  position: absolute;
+  left: 0;
+  transition: inherit;
+  margin: 5;
+}
+.pseudo-text-effect > p {
+  display: inline-block;
+  transform: translateY(0%);
+  transition: inherit;
+}
+.pseudo-text-effect:hover > p {
+  transform: translateY(-100%);
+  margin: 0 5px;
+}
+.pseudo-text-effect:hover::after {
+  transform: translateY(0%);
+  font-weight: bold;
+  /* text-decoration: underline; */
+}
+
+li {
+  list-style: none;
+  /* margin-bottom: 20px; */
+  /* display: flex; */
+  /* align-items: center; */
+  cursor: pointer;
+}
+
+ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 230px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* bottom: 0; */
+  width: 300px;
+  background: #fff;
+}
+.clipped{
+  clip-path: circle(30px at 40px 40px);
+}
+
+.clipped:hover{
+  clip-path: circle(600px);
+  transition: all 1s ease-out;
 }

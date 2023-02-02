@@ -8,6 +8,7 @@ function Hero({sliderRange,setsliderRange}) {
   return (
     <div className="bg-[#E7F0F5] w-full w-[95%] h-[100vh] flex flex-col md:w-[80%] snap-normal" id="hero">
       <Header />
+      
       <div className=" flex flex-row items-center justify-between h-[75%] ">
         {/* left */}
         <div className="w-full flex flex-col h-full lg:w-[50%] items-start justify-center text-left">

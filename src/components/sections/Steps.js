@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { motion as m, useAnimation } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useEffect } from "react";
-import StepsDetails from "../elements/StepsDetails";
 import curvedUnderline from "../../assets/Vector 340.png";
 
 const boxVariant = {
