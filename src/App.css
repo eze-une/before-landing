@@ -5,7 +5,7 @@ body {
   background-color: #ffffff;
 }
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 .App {
@@ -184,11 +184,11 @@ html {
 }
 .pseudo-text-effect:hover > p {
   transform: translateY(-100%);
-  margin: 0 5px;
+  /* margin: 0 5px; */
 }
 .pseudo-text-effect:hover::after {
   transform: translateY(0%);
-  font-weight: bold;
+  /* font-weight: bold; */
   /* text-decoration: underline; */
 }
 
@@ -216,10 +216,19 @@ ul {
   background: #fff;
 }
 .clipped{
-  clip-path: circle(30px at 40px 40px);
+  clip-path: circle(30px at 90% 15%);
 }
 
 .clipped:hover{
   clip-path: circle(600px);
   transition: all 1s ease-out;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: #fff;
 }
