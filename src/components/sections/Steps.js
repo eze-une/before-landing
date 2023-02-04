@@ -68,6 +68,11 @@ function Steps() {
   const [scrollColor, setscrollColor] = useState();
   
   return (
+    <>
+    <div className="w-full h-[2.5rem] flex justify-start items-center text-left mb-10">
+          <div className="lg:w-[12%] w-[10%] h-full bg-[#FFAE00] mr-10"></div>
+          <p className="font-bold text-3xl">WE TAKE SIMPLE APPROACH</p>
+        </div>
     <m.div className="flex flex-col h-screen bg-blue-400 w-full overflow-y-scroll overscroll-auto z-0  scrollbar snapping  snapped">
       <m.div className="h-full w-full">
         {list2.map(({ color, text1, text2, highlitedText }, index1) => {
@@ -80,9 +85,12 @@ function Steps() {
               viewport={{ once: false, amount: 0.7 }}
               transition={{ staggerChildren: 0.2 }}
             >
+              {/* left */}
               <div className="hidden lg:flex flex-col w-full lg:w-[50%] lg:h-full bg-[#131622] space-y-10 text-3xl justify-center items-center text-[#A7A9B1] text-left"></div>
+              
+              {/* right */}
               <m.div
-                className="w-full h-full lg:w-[50%] flex items-center justify-center text-left text-white text-3xl font-bold p-20"
+                className="w-full h-full lg:w-[50%] flex items-center justify-center text-center text-white text-3xl font-bold py-20"
                 whileInView={() => setscrollColor(color)}
                 style={{ backgroundColor: color }}
               >
@@ -95,7 +103,7 @@ function Steps() {
                     {highlitedText}
                     <img
                       src={curvedUnderline}
-                      className="w-full h-[21.07px]"
+                      className="w-[90%] h-[21.07px]"
                       alt="Flowbite Logo"
                     />
                   </m.span>{" "}
@@ -154,6 +162,7 @@ function Steps() {
         )}
       </div>
     </m.div>
+    </>
   );
 }
 

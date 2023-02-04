@@ -37,7 +37,7 @@ export default function Teams() {
             dragConstraints={{ right: 0, left: -width }}
           >
             <div className=" h-full lg:w-[50%] flex flex-row items-center justify-center">
-              <div className="h-[300px] w-20  bg-[#57BE94]  ml-[10rem] mr-[2rem]"></div>
+              <div className="h-[300px] w-20  bg-[#57BE94]  ml-[1rem] md:ml-[5rem] mr-[2rem]"></div>
               <p className="text-5xl font-bold text-left">
                 We would like to push the innovative{" "}
                 <span className="text-[#57BE94]"> Boundary</span> of technology
