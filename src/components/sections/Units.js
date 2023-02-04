@@ -7,11 +7,18 @@ function Units() {
   const textLineStart = useRef(null);
   return (
     <>
-      <div className="flex  flex-col h-[100vh] lg:h-[70vh] w-full space-y-20 lg:space-y-0 bg-[#E7F0F5] snapped">
-        <div className="w-full flex justify-start items-start text-left">
+      <div className="flex flex-col h-[100vh] lg:h-[70vh] w-full space-y-20 lg:space-y-0 bg-[#E7F0F5] snapped">
+        <div className="flex flex-row ">
+          <div className="h-10 w-5 bg-[#57BE94] w-[10%] lg:w-[12%] mr-10"></div>
+          <p className="text-3xl text-left font-bold">
+            Who Help us to make these true?
+          </p>
+        </div>
+
+        {/* <div className="w-full flex justify-start items-start text-left">
           <div className="lg:w-[17%] w-[10%] h-full bg-orange-600 mr-10"></div>
           <p className="font-bold text-3xl">How Do We Make This True?</p>
-        </div>
+        </div> */}
         <div className="flex flex-col lg:flex-row items-center justify-center text-center">
           <p
             className="text-5xl font-bold w-[90%] lg:w-[40%] lg:py-20 lg:text-left lg:text-7xl"
@@ -20,7 +27,7 @@ function Units() {
             These Are The{" "}
             <span className="inline-block">
               <span
-                className=" text-transparent"
+                className="text-transparent"
                 style={{ WebkitTextStroke: "1px black" }}
               >
                 Units
@@ -43,10 +50,11 @@ function Units() {
             </span>{" "}
             That Help Us Get There
           </p>
-          <div className="flex flex-col rotate-[90deg] lg:rotate-0 mt-40 lg:mt-0 w-[40%] lg:w-[20%] space-y-5 lg:ml-20">
+
+          <div className="flex flex-col rotate-[90deg] ml:10 lg:rotate-0 mt-40 lg:mt-0 w-[60%] md:w-[30%] lg:w-[20%] space-y-5 lg:ml-20">
             <AnchorLink href="#units">
               <div
-                className="flex flex-row space-x-10 bg-white w-full h-[4rem] text-center items-center "
+                className="flex flex-row space-x-10 bg-white w-[100%] h-[4rem] text-center items-center "
                 id="labs"
               >
                 <div className="bg-[#57BE94] h-full w-4"></div>
@@ -56,11 +64,11 @@ function Units() {
 
             <AnchorLink href="#units">
               <div
-                className="flex flex-row space-x-10 bg-white w-full h-[4rem] text-center items-center"
-                id="enginnering"
+                className="flex flex-row space-x-10 bg-white w-full h-[4rem] text-center items-center "
+                id="labs"
               >
-                <div className="bg-[#4F66AF] h-full w-4"></div>
-                <p className="text-2xl text-[#4F66AF]">ENGINEERING</p>
+                <div className="bg-[#57BE94] h-full w-4"></div>
+                <p className="text-2xl text-[#57BE94]">ENGINEERING</p>
               </div>
             </AnchorLink>
             <AnchorLink href="#units">
