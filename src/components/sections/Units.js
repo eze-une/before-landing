@@ -67,7 +67,7 @@ function Units() {
                 className="flex flex-row space-x-10 bg-white w-full h-[4rem] text-center items-center "
                 id="labs"
               >
-                <div className="bg-[#57BE94] h-full w-4"></div>
+                <div className="bg-[#57BE94] h-full w-4" id="enginnering"></div>
                 <p className="text-2xl text-[#57BE94]">ENGINEERING</p>
               </div>
             </AnchorLink>
