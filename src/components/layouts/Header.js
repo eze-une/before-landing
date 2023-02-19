@@ -135,15 +135,15 @@ function Header() {
           animate={show ? showside : hide}
           className="z-10 absolute right-0 top-0 h-full w-full  md:h-[100vh] md:w-[30%] bg-white sidebar"
         >
-          <m.div className="flex flex-col items-center text-left justify-left">
+          <m.div className="flex flex-col items-center justify-center">
             <div className="w-full text-2xl flex justify-end items-end text-right p-10 hover:cursor-pointer">
               <AiOutlineClose className="" onClick={() => setshow(false)} />
             </div>
-            <m.div className="flex flex-col items-center justify-center text-left  space-y-20 text text-2xl w-full">
+            <m.div className="flex flex-col items-center justify-center text-left  space-y-10 text text-2xl w-full">
               <div className="w-full h-full flex flex-col justify-end items-center">
                 <m.ul
                   variants={variants}
-                  className="flex flex-col justify-center items-start ml-[40%] w-[80%] space-y-[9rem]  "
+                  className="flex flex-col justify-center items-center space-y-[5rem]  "
                 >
                   {itemIds.map((i,index) => (
                     <MenuItem i={i} index={index} key={i} setshow={setshow} />

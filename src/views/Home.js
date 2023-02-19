@@ -1,7 +1,7 @@
 import React from "react";
 import BodySection from "../components/layouts/BodySection";
 import Footer from "../components/layouts/Footer";
-import Header from "../components/layouts/Header";
+import "react-multi-carousel/lib/styles.css";
 
 function Home() {
   return (
@@ -10,12 +10,6 @@ function Home() {
         <BodySection />
         <Footer />
       </div>
-
-      {/* <div className="w-full h-[100vh] flex justify-center items-center">
-      <div className="h-[300px] w-[500px] bg-black clipper ">
-          <div className="w-full h-full bg-slate-500 clipped"></div>
-      </div>
-      </div> */}
     </>
   );
 }

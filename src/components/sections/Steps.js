@@ -42,6 +42,7 @@ const list2 = [
       "implement our proposed strategies until it reaches a point where it shows market traction  ",
     color: "#57BE94",
   },
+  
   {
     text1: "The moment the business becomes valid enough to raise funds",
     highlitedText: "we spin it off ",
@@ -50,6 +51,7 @@ const list2 = [
   },
 ];
 
+const colorleft=["#FFAE00","#57BE94","#4F66AF","#FFAE00","#57BE94","#4F66AF"]
 const textVariant = {
   offscreen: { y: "100%", opacity: 0, scale: 0 },
   onscreen: {
@@ -64,9 +66,7 @@ const textVariant = {
   },
 };
 function Steps() {
-  const [scrollIndex, setscrollIndex] = useState();
-  const [scrollColor, setscrollColor] = useState();
-  
+  const [scrollIndex, setscrollIndex] = useState();  
   return (
     <>
     <div className="w-full h-[2.5rem] flex justify-start items-center text-left mb-10">
@@ -91,14 +91,13 @@ function Steps() {
               {/* right */}
               <m.div
                 className="w-full h-full lg:w-[50%] flex items-center justify-center text-center text-white text-3xl font-bold py-20"
-                whileInView={() => setscrollColor(color)}
                 style={{ backgroundColor: color }}
               >
                 <p>
-                  <m.span variants={textVariant}>{text1} </m.span>
+                  <m.span whileInView={() => setscrollIndex(index1)} variants={textVariant}>{text1} </m.span>
                   <m.span
                     variants={textVariant}
-                    className="text-[#131622] inline-block"
+                    className={index1==4?"mx-[-30px] text-[#131622]  inline-block ":"text-[#131622]  inline-block"}
                   >
                     {highlitedText}
                     <img
@@ -108,21 +107,21 @@ function Steps() {
                     />
                   </m.span>{" "}
                   <m.span variants={textVariant}>{text2}</m.span>
-                  <m.p whileInView={() => setscrollIndex(index1)}></m.p>
+                  <m.p></m.p>
                 </p>
               </m.div>
             </m.div>
           );
         })}
       </m.div>
-     
-
-      <div className="absolute text-left text-[#A7A9B1] space-y-10 ml-[10%] mt-[10%] text-3xl">
+      
+      {/* tab and desktop left */}
+      <div className="absolute text-left text-[#A7A9B1] space-y-10 ml-[15%] mt-[10%] text-3xl">
         {list.map((item, index2) => (
           <div className="hidden lg:flex">
           <div
               className={index2 == scrollIndex ? "w-3 mr-5" : "hidden"}
-              style={{ backgroundColor: scrollColor }}
+              style={{ backgroundColor: colorleft[index2] }}
             ></div>
             <p
               className={
@@ -145,16 +144,20 @@ function Steps() {
           </div>
         ))}
       </div>
+
+
+      
+      {/* mobile left */}
       <div className="absolute text-left text-[#A7A9B1] space-y-10 ml-[10%] mt-[10%] text-3xl">
         {list.map((item, index2) =>
           {
             if (index2 == scrollIndex) {
               return (
                 <div className="flex lg:hidden">
-                  <p className="text-white text-5xl font-bold mr-2">
+                  <p className="text-white text-3xl font-bold mr-2">
                     0{index2 + 1}.{" "}
                   </p>
-                  <p className="text-white text-5xl font-bold">{item}</p>
+                  <p className="text-white text-3xl font-bold">{item}</p>
                 </div>
               );
             }
@@ -167,42 +170,3 @@ function Steps() {
 }
 
 export default Steps;
-
-
-
-
- {/* <div
-        className={
-          // show
-          scrollIndex==undefined ? 
-            "hidden":  "flex flex-col justify-center items-center  text-[#A7A9B1] space-y-10 text-left text-3xl min-h-screen z-20 sticky top-0 w-[50%]"
-             
-        }
-      >
-        {list.map((item, index2) => (
-          <div className="flex" key={index2}>
-            <div
-              className={index2 == scrollIndex ? "w-3 mr-5" : "hidden"}
-              style={{ backgroundColor: scrollColor }}
-            ></div>
-            <p
-              className={
-                index2 == scrollIndex
-                  ? "text-white text-5xl font-bold mr-2"
-                  : "hidden"
-              }
-            >
-              0{index2 + 1}.{" "}
-            </p>
-            <p
-              className={
-                index2 == scrollIndex
-                  ? "text-white text-5xl font-bold"
-                  : "text-gray-300"
-              }
-            >
-              {item}
-            </p>
-          </div>
-        ))}
-      </div> */}

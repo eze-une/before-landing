@@ -1,6 +1,6 @@
 import React from "react";
 import LogoImage from "../../assets/Group 1896.png";
-import Facebook from "../../assets/socials/Group 1931.png";
+import Facebook from "../../assets/socials/Social Icons.png";
 import Linkdin from "../../assets/socials/Group 1932.png";
 import Youtube from "../../assets/socials/Group 1933.png";
 import Twitter from "../../assets/socials/Group 1934.png";
@@ -27,12 +27,11 @@ function Footer() {
       </div>
 
 
-      <div className="flex flex-col  lg:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start  p-20 text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0">
-       
-        <div className="flex flex-col  lg:text-right text-center w-[30%] md:w-[7%]">
+      <div className="flex flex-col pt-10  lg:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start pl-5 md:p-20  text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0">
+        <div className="flex flex-col md:justify-center md:items-center w-full md:text-right text-left md:text-left md:w-[20%]">
               <img
                 src={LogoImage}
-                className="h-20  md:h-15 lg:h-20"
+                className="h-20 w-20  md:h-15 lg:h-full"
                 alt="Flowbite Logo"
               />
             <p className="font-bold text-2xl text-white">Ablaze</p>
@@ -55,7 +54,7 @@ function Footer() {
           <p>Privacy Policy</p>
           <p>Events</p>
         </div>
-        <div className=" flex flex-col font-bold text-white ">
+        <div className=" flex flex-col font-bold text-white pb-10">
           <p>Subscribe to our newsletter!</p>
           <div className="flex flex-row items-center">
             <input
@@ -70,8 +69,8 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex bg-[#131622] text-white items-start justify-between text-left px-20">
-        <p>
+      <div className="flex flex-col py-5 space-y-5 md:space-y-0 md:py-10 md:flex-row bg-[#131622] text-white items-start justify-between text-left pl-5 md:px-[10%]">
+        <p >
           <span className="text-[#57BE94]">@ Copyright </span>Ablaze Labs - all
           right reserved 2023
         </p>

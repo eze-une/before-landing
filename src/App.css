@@ -5,7 +5,8 @@ body {
   background-color: #ffffff;
 }
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
 }
 
 .App {
@@ -83,8 +84,11 @@ html {
   aspect-ratio: 1/1;
 }
 .snap-nm {
-  scroll-snap-align: start end;
-  scroll-snap-stop: normal;
+  scroll-snap-align:center;
+  
+  /* scroll-snap-stop: normal; */
+  scroll-padding-bottom: 40px;
+  scroll-snap-stop: unset;
 }
 .snao-end {
   scroll-snap-align: start end;
@@ -231,4 +235,28 @@ ul {
   bottom: 0;
   width: 300px;
   background: #fff;
+}
+
+
+.scroller{
+  overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+}
+
+.right {
+  right: 0;
+  margin-right: 20px;
+}
+
+.left {
+  left: 10;
 }
