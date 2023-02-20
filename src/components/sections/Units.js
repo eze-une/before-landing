@@ -14,11 +14,6 @@ function Units() {
             Who Help us to make these true?
           </p>
         </div>
-
-        {/* <div className="w-full flex justify-start items-start text-left">
-          <div className="lg:w-[17%] w-[10%] h-full bg-orange-600 mr-10"></div>
-          <p className="font-bold text-3xl">How Do We Make This True?</p>
-        </div> */}
         <div className="flex flex-col lg:flex-row items-center justify-center text-center  md:mx-[10%] mt-10">
           <p
             className="text-5xl font-bold lg:py-20 lg:text-left lg:text-7xl md:w-[55%]"
@@ -50,75 +45,38 @@ function Units() {
             </span>{" "}
             That Help Us Get There
           </p>
-          <div className="py-20 md:flex-col w-full  md:flex-col ml:10 md:w-[30%] lg:w-[45%] lg:ml-20">
-            <div className="flex flex-row justify-center md:flex-col w-full px-10 space-x-10 md:space-x-0 md:space-y-10 md:justify-end">
+
+
+          <div className="py-20 flex w-full lg:flex-col ml:10 md:w-[30%] lg:w-[45%] lg:ml-20">
+            <div className="flex flex-row justify-center lg:flex-col w-full px-10 space-x-10 lg:space-x-0 lg:space-y-10 lg:justify-end">
             <AnchorLink href="#units">
               <div
-                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center md:w-[60%] md:justify-start md:h-[4rem] md:flex-row  "
+                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-[60%] lg:justify-start lg:h-[4rem] lg:flex-row  "
                 id="labs"
               >
-                <div className="bg-[#57BE94] w-full h-4  md:h-full md:w-4"></div>
-                <p className="text-2xl text-[#57BE94] translate-y-[50%] rotate-[90deg] md:rotate-[0deg] md:translate-y-0 md:ml-5">LABS</p>
+                <div className="bg-[#57BE94] w-full h-4  lg:h-full lg:w-4"></div>
+                <p className="text-2xl text-[#57BE94] translate-y-[50%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:ml-5">LABS</p>
               </div>
             </AnchorLink>
             <AnchorLink href="#units">
               <div
-                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center md:w-[60%] md:justify-start md:h-[4rem] md:flex-row"
+                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-[60%] lg:justify-start lg:h-[4rem] lg:flex-row"
                 id="enginnering"
               >
-                <div className="bg-[#4F66AF] w-full h-4  md:h-full md:w-4"></div>
-                <p className="text-2xl text-[#4F66AF] translate-y-[200%] rotate-[90deg] md:rotate-[0deg] md:translate-y-0 md:ml-5">ENGINEERING</p>
+                <div className="bg-[#4F66AF] w-full h-4  lg:h-full lg:w-4"></div>
+                <p className="text-2xl text-[#4F66AF] translate-y-[200%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:ml-5">ENGINEERING</p>
               </div>
             </AnchorLink>
             <AnchorLink href="#units">
               <div
-                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center md:w-[60%] md:justify-start md:h-[4rem] md:flex-row"
+                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-[60%] lg:justify-start lg:h-[4rem] lg:flex-row"
                 id="sandbox"
               >
-                <div className="bg-[#FFAE00] w-full h-4 md:h-full md:w-4"></div>
-                <p className="text-2xl text-[#FFAE00] translate-y-[130%] rotate-[90deg] md:rotate-[0deg] md:translate-y-0 md:ml-5">SANDBOX</p>
+                <div className="bg-[#FFAE00] w-full h-4 lg:h-full lg:w-4"></div>
+                <p className="text-2xl text-[#FFAE00] translate-y-[130%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:ml-5">SANDBOX</p>
               </div>
             </AnchorLink>
-            {/* <AnchorLink href="#units">
-              <div
-                className="flex flex-col md:flex-row  h-[15rem]  bg-white text-left items-center  md:mx-0 md:ml-60 md:h-[4rem]"
-                id="labs"
-              >
-                <div className="bg-[#57BE94] w-full h-4  md:h-full md:w-4"></div>
-                <p className="text-2xl text-[#57BE94] translate-y-[200%] rotate-[90deg] bg-pink-30">ENGINEERING</p>
-              </div>
-            </AnchorLink>
-
-            <AnchorLink href="#units">
-              <div
-                className="flex flex-col md:flex-row  h-[15rem] mx-5 bg-white text-left items-center  md:mx-0 md:ml-60 md:h-[4rem]"
-                id="labs"
-              >
-                <div className="bg-[#57BE94] w-full h-4  md:h-full md:w-4"></div>
-                <p className="text-2xl text-[#57BE94] translate-y-[150%] rotate-[90deg] bg-pink-30">SANDBOX</p>
-              </div>
-            </AnchorLink> */}
             </div>
-           
-
-            {/* <AnchorLink href="#units">
-              <div
-                className="flex flex-col md:flex-row w-[5rem] h-[15rem] mx-5 bg-white text-left items-center  md:mx-0 md:ml-60 md:h-[4rem]"
-                id="enginnering"
-              >
-                <div className="bg-[#57BE94] w-full h-4  md:h-full md:w-4"></div>
-                <p className="text-2xl text-[#57BE94] translate-y-[50%] rotate-[90deg]">ENGINEERING</p>
-              </div>
-            </AnchorLink>
-            <AnchorLink href="#units">
-              <div
-                className="flex flex-col md:flex-row w-[5rem] h-[15rem] mx-5 bg-white text-left items-center  md:mx-0 md:ml-60 md:h-[4rem]"
-                id="sandbox"
-              >
-                <div className="bg-[#FFAE00] h-full w-4"></div>
-                <p className="text-2xl text-[#FFAE00]">SANDBOX</p>
-              </div>
-            </AnchorLink> */}
           </div>
         </div>
       </div>
