@@ -11,14 +11,14 @@ function TeamImage({image,link,name,position}) {
       onClick={() => setisClicked(!isClicked)}
       className={isClicked ? "item-click relative" : "item relative"}
     >
-      <div className="bg-black rounded-[1rem] h-[100%] img-team">
+      <div className="bg-black rounded-[1rem] h-full">
         <img src={image} className="opacity-60 object-cover object-cover" />
       </div>
       <div
         className={
           isClicked
-            ? "absolute flex flex-row justify-between items-start text-white bg-black w-[94%] pb-6 mt-[-4rem] text-left px-2 rounded-t-[12px] clicked-team-img "
-            : " rotate-[270deg] absolute z-10 -mt-[60%] text-white unclicked-team-img "
+            ? "absolute flex flex-row justify-between items-start text-white bg-black w-[94%] pb-6 -mt-20 text-left px-2 rounded-t-[12px] "
+            : " rotate-[270deg] absolute z-10 -mt-[60%] text-white "
         }
       >
         <div className="flex flex-col text-left">
