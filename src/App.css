@@ -260,3 +260,13 @@ ul {
 .left {
   left: 10;
 }
+
+.unclicked-team-img {
+  -webkit-border-radius: 12px 0 0 0;
+  -moz-border-radius: 12px 0 0 0;
+}
+.img-team{
+  -webkit-border-radius:1rem;
+  -moz-border-radius:1rem;
+
+}

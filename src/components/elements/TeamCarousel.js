@@ -98,7 +98,7 @@ function TeamCarousel() {
     <Carousel
       responsive={responsive}
       swipeable={true}
-      className=" pb-[13rem] h-full"
+      className=" pb-[13rem] h-[100%]"
     //   centerMode={tru}
       customRightArrow={<CustomRight />}
       customLeftArrow={<CustomLeft />}
