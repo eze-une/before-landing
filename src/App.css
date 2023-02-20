@@ -5,8 +5,8 @@ body {
   background-color: #ffffff;
 }
 html {
-  scroll-snap-type: y mandatory;
-  scroll-snap-stop: always;
+  /* scroll-snap-type: y mandatory;
+  scroll-snap-stop: always; */
 }
 
 .App {

@@ -14,9 +14,9 @@ function Units() {
             Who Help us to make these true?
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center text-center  md:mx-[10%] mt-10">
+        <div className="flex flex-col mt-10 items-center justify-center text-center  md:mx-[10%] lg:flex-row" >
           <p
-            className="text-5xl font-bold lg:py-20 lg:text-left lg:text-7xl md:w-[55%]"
+            className="text-5xl font-bold lg:py-10 lg:text-left lg:text-7xl md:w-[55%]"
             ref={textLineStart}
           >
             These Are The{" "}
@@ -47,35 +47,40 @@ function Units() {
           </p>
 
 
-          <div className="py-20 flex w-full lg:flex-col ml:10 md:w-[30%] lg:w-[45%] lg:ml-20">
-            <div className="flex flex-row justify-center lg:flex-col w-full px-10 space-x-10 lg:space-x-0 lg:space-y-10 lg:justify-end">
+          <div className="py-20 flex flex-row w-full lg:flex-col ml:10 md:w-[45%] lg:ml-20">
+            <div className="flex flex-row justify-center w-full px-10 lg:flex-col lg:space-x-0 lg:items-center">
+            
+            <div className="flex flex-row space-x-10  lg:space-x-0 lg:flex-col lg:space-y-20">
             <AnchorLink href="#units">
               <div
-                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-[60%] lg:justify-start lg:h-[4rem] lg:flex-row  "
+                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-full  lg:justify-start lg:h-[4rem] lg:flex-row  "
                 id="labs"
               >
                 <div className="bg-[#57BE94] w-full h-4  lg:h-full lg:w-4"></div>
-                <p className="text-2xl text-[#57BE94] translate-y-[50%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:ml-5">LABS</p>
+                <p className="text-2xl text-[#57BE94] translate-y-[50%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:mx-5">LABS</p>
               </div>
             </AnchorLink>
+            
+            
             <AnchorLink href="#units">
               <div
-                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-[60%] lg:justify-start lg:h-[4rem] lg:flex-row"
+                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-full lg:justify-start lg:h-[4rem] lg:flex-row"
                 id="enginnering"
               >
                 <div className="bg-[#4F66AF] w-full h-4  lg:h-full lg:w-4"></div>
-                <p className="text-2xl text-[#4F66AF] translate-y-[200%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:ml-5">ENGINEERING</p>
+                <p className="text-2xl text-[#4F66AF] translate-y-[200%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:mx-5">ENGINEERING</p>
               </div>
             </AnchorLink>
             <AnchorLink href="#units">
               <div
-                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-[60%] lg:justify-start lg:h-[4rem] lg:flex-row"
+                className="flex flex-col w-[3rem] h-60 bg-white text-left items-center lg:w-full  lg:justify-start lg:h-[4rem] lg:flex-row"
                 id="sandbox"
               >
                 <div className="bg-[#FFAE00] w-full h-4 lg:h-full lg:w-4"></div>
-                <p className="text-2xl text-[#FFAE00] translate-y-[130%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:ml-5">SANDBOX</p>
+                <p className="text-2xl text-[#FFAE00] translate-y-[130%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:mx-5">SANDBOX</p>
               </div>
             </AnchorLink>
+            </div>
             </div>
           </div>
         </div>
