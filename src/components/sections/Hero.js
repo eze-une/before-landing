@@ -43,11 +43,11 @@ function Hero({sliderRange,setsliderRange}) {
                 alt="Flowbite Logo"
               />
             </span>
-            k imaginatve
+            k imaginative
           </h1>
           <h2 className="w-full md:w-[80%] text-2xl">
             The word <span className="text-[#57BE94]">ablaze</span> refers to a{" "}
-            <span className="text-[#FFAE00]">flame</span> with in a feild of
+            <span className="text-[#FFAE00]">flame</span> with in a field of
             vision
           </h2>
         </div>
