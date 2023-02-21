@@ -29,7 +29,7 @@ function BodySection() {
         <Vision className="snap-normal" myref={myref}/>   
         <Steps  className="snap-center snap-always container"/>
         {/* <SecondSteps />  */}
-        <Teams  className="snap-always snap-center"/>   
+        <Teams  className="snap-always snap-center "/>   
         <Units className="snap-always snap-center" />
       </div>
     </div>
