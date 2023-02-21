@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
-import curvedUnderline from "../../assets/Vector 340.png";
-import { calcLength, motion as m } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 const list = ["LABS", "ENGINEERING", "SANDBOX"];
 const list2 = [
@@ -54,11 +53,11 @@ function UnitScrollableDetails({ scrollToSandox, setscrollToSandox, scrollToEngi
 
   if (scrollToEngineering) {
     EngineeringRef.current?.scrollIntoView(({ behavior: 'smooth' }));
-    setscrollToSandox(false);
+    setscrollToEngineering(false);
   }
   if (scrollToSandox) {
     SandboxRef.current?.scrollIntoView(({ behavior: 'smooth' }));
-    setscrollToEngineering(false);
+    setscrollToSandox(false);
   }
 
   return (
@@ -219,7 +218,7 @@ function UnitScrollableDetails({ scrollToSandox, setscrollToSandox, scrollToEngi
         </div>
 
         {/* mobile view        */}
-        <div className="absolute text-left text-[#A7A9B1] space-y-10 ml-[5%] mt-[5%] text-3xl">
+        <div className="absolute text-left text-[#A7A9B1] space-y-10 ml-[5%] mt-[10%] text-3xl">
           {list.map((item, index) => {
             if (index == scrollIndex) {
               return (

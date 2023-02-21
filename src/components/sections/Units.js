@@ -61,7 +61,7 @@ function Units() {
                     id="labs"
                   >
                     <div className="bg-[#57BE94] w-full h-3  lg:h-full lg:w-2"></div>
-                    <p className="text-[#57BE94] font-light mt-3 lg:mt-0 translate-y-[50%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:mx-5">LABS</p>
+                    <p className="text-[#57BE94] font-light mt- lg:mt-0 translate-y-[50%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:mx-5">LABS</p>
                   </div>
                 </AnchorLink>
 

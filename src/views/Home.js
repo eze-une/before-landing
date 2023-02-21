@@ -8,7 +8,7 @@ function Home() {
     <>
       <div className=" scrollbar snap-y snap-mandatory">
         <BodySection />
-        <Footer />
+        <Footer />  
       </div>
     </>
   );
