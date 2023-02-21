@@ -13,10 +13,11 @@ function BodySection() {
   useEffect(() => {
     if(sliderRange>=80){
       window.scrollTo({
-        top: myref.current.offsetTop,
+        top: myref.current.offsetTop+300,
         behavior: 'smooth',
       });
       setsliderRange(10);
+      console.log("sdfgdfg",myref)
     }
   }, [sliderRange])
   return (
@@ -30,7 +31,7 @@ function BodySection() {
         <Steps  className="snap-center snap-always container"/>
         {/* <SecondSteps />  */}
         <Teams  className="snap-always snap-center "/>   
-        <Units className="snap-always snap-center" />
+        <Units className="snap-always   sn  ap-center" />
       </div>
     </div>
   )
