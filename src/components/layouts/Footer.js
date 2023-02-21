@@ -27,7 +27,7 @@ function Footer() {
       </div>
 
 
-      <div className="flex flex-col pt-10  sm:space-x-5 sm:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start pl-5 sm:p-10  text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0 "id="footer">
+      <div className="flex flex-col pt-10  sm:space-x-10 sm:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start pl-5 sm:p-10  text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0 "id="footer">
         <div className="flex flex-col sm:justify-center md:items-center md:text-right text-left md:text-left  snap-normal">
           <img
             src={LogoImage}
@@ -57,7 +57,7 @@ function Footer() {
             <p>Privacy Policy</p>
             <p>Events</p></div>
         </div>
-        <div className=" flex flex-col font-bold text-white pb-10 w-[80%] md:w-[40%] lg:w-[30%]">
+        <div className=" flex flex-col font-bold text-white pb-10 w-[80%] sm:w-[40%] md:w-[40%] lg:w-[30%]">
           <p>Subscribe to our newsletter!</p>
           <div className="flex flex-row items-center w-[90%] sm:w-full">
             <input

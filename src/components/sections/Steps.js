@@ -7,7 +7,7 @@ const boxVariant = {
   hidden: { opacity: 0, scale: 0, x: 200 },
 };
 
-const list = ["IDEATE", "VALIDATE", "DESGIN", "BUILD", "SPINOUT", "SCALE"];
+const list = ["IDEATE", "VALIDATE", "DESIGN", "BUILD", "SPINOUT", "SCALE"];
 const list2 = [
   {
     text1: "Everything starts with an idea, spark of",
@@ -98,7 +98,7 @@ function Steps() {
               
               {/* right */}
               <m.div
-                className="w-full h-full px-[2rem] flex items-center justify-center text-left md:text-center text-white text-3xl md:text-4xl font-bold py-20 lg:w-[50%] md:px-[0rem]"
+                className="w-full h-full px-[2rem] flex items-center justify-center text-left md:text-center text-white text-3xl md:text-4xl font-bold py-20 lg:w-[50%] md:px-[1rem]"
                 style={{ backgroundColor: color }}
               >
                 <p>

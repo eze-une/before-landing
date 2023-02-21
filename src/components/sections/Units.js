@@ -14,9 +14,9 @@ function Units() {
     <>
       <div className="flex flex-col h-full w-full space-y-20 lg:space-y-0 snapped bg-[#F6F9FF]">
         <div className="flex flex-row snap-normal">
-          <div className="h-10 w-5 bg-[#57BE94] w-[10%] lg:w-[12%] mr-10"></div>
+          <div className="h-10 w-5 bg-[#FFAE00] w-[10%] lg:w-[12%] mr-10"></div>
           <p className="text-3xl text-left font-bold uppercase">
-            Who Help us to make these true?
+          How Do we make these true?
           </p>
         </div>
         <div className="flex flex-col mt-10 items-center justify-center text-center  md:mx-[10%] lg:flex-row" >
@@ -54,7 +54,7 @@ function Units() {
 
           <div className="py-20 flex flex-row w-full lg:flex-col ml:10 md:w-[45%] lg:ml-20 snapped">
             <div className="flex flex-row justify-center w-full px-10 lg:flex-col lg:space-x-0 lg:items-center">
-              <div className="flex flex-row space-x-10  lg:space-x-0 lg:flex-col lg:space-y-20 text-3xl">
+              <div className="flex flex-row space-x-10  lg:space-x-0 lg:flex-col lg:space-y-5 text-3xl">
                 <AnchorLink href="#units">
                   <div
                     className="flex flex-col w-[4rem] h-60 bg-white text-left items-center lg:w-[20rem] lg:justify-start lg:h-[5rem] lg:flex-row  "

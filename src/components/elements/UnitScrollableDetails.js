@@ -63,7 +63,7 @@ function UnitScrollableDetails({ scrollToSandox, setscrollToSandox, scrollToEngi
   return (
     <>
       <m.div
-        className="flex flex-col h-screen bg-blue-400 w-full overflow-y-scroll overscroll-auto z-0 snapping scrollbar snapper "
+        className="flex flex-col h-screen bg-blue-400 w-full overflow-y-scroll overscroll-auto z-0 snapping scrollbar snapper  "
         id="units"
       >
         <m.div className="h-full w-full">
@@ -76,7 +76,7 @@ function UnitScrollableDetails({ scrollToSandox, setscrollToSandox, scrollToEngi
           >
             <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
             <m.div
-              className="w-full h-full lg:w-[50%] md:text-2xl font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
+              className="w-full h-full lg:w-[50%] font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
               style={{ backgroundColor: "#57BE94" }}
             >
               <m.div className="flex" variants={textVariant}>
@@ -114,9 +114,9 @@ function UnitScrollableDetails({ scrollToSandox, setscrollToSandox, scrollToEngi
             viewport={{ once: false, amount: 0.7 }}
             transition={{ staggerChildren: 0.2 }}
           >
-            <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
+            <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-5  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
             <m.div
-              className="w-full h-full lg:w-[50%] md:text-2xl font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
+              className="w-full h-full lg:w-[50%] font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
               style={{ backgroundColor: "#4F66AF" }}
             >
               <m.div className="flex" variants={textVariant}>
@@ -155,7 +155,7 @@ function UnitScrollableDetails({ scrollToSandox, setscrollToSandox, scrollToEngi
           >
             <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
             <m.div
-              className="w-full h-full lg:w-[50%] md:text-2xl font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
+              className="w-full h-full lg:w-[50%] md:text-1xl font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
               style={{ backgroundColor: "#FFAE00" }}
             >
               <m.div className="flex" variants={textVariant}>

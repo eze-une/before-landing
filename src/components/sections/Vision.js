@@ -250,7 +250,7 @@ function Vision({ myref }) {
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <div className="snap-end space-y-5">
+        <div className="snapped space-y-5">
         {row1.map((row, index) => (
           <VisionImageCard
             key={index}
@@ -297,7 +297,7 @@ function Vision({ myref }) {
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <div className="snap-end space-y-5">
+        <div className="snapped space-y-5">
         {row2.map((row, index) => (
           <VisionImageCard
             key={index}
@@ -345,7 +345,7 @@ function Vision({ myref }) {
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <div className="snap-end space-y-5">
+        <div className="snapped space-y-5">
         {row3.map((row, index) => (
           <VisionImageCard
             key={index}
