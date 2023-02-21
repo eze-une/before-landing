@@ -52,19 +52,19 @@ function Vision({ myref }) {
   // console.log({myref});
   return (
     <div
-      className="w-full flex flex-col md:w-[80%] mb-20  lg:pt-20 space-y-8 snap-nm lg:mt-20"
+      className="w-full flex flex-col md:w-[80%] mb-20  lg:pt-20 space-y-8 lg:mt-20"
       ref={myref}
       id="vision"
     >
       <div className="flex flex-col items-center justify-between text-left ">
-        <div className="flex flex-col justify-center items-center lg:justify-start h-[100vh] lg:h-full lg:text-1xl px-5 md:px-10 py-10 space-y-10 lg:space-y-5 lg:flex-row bg-[#000000] text-[#FFFFFF] rounded-0 md:rounded-[25px]">
+        <div className="flex flex-col justify-center items-center lg:justify-start h-[100vh] lg:h-full lg:text-1xl px-5 md:px-10 py-10 space-y-10 lg:space-y-5 lg:flex-row bg-[#000000] text-[#FFFFFF] rounded-0 md:rounded-[25px] snapped">
           <div className=" flex w-full lg:w-[40%] text-4xl font-bold items-center">
-            <div className="w-3 h-full mr-5 bg-[#57BE94] lg:w-5"></div>
+            <div className="w-3 h-full md:h-[10rem] mr-5 bg-[#57BE94]"></div>
             <p className="text-2xl md:text-5xl ">
               Our <span className="text-[#57BE94]">vision</span> lean towards
             </p>
           </div>
-          <div className="w-full text-1xl lg:text-1xl lg:w-[60%] flex flex-col space-y-10 lg:space-y-0 items-center ">
+          <div className="w-full text-1xl lg:text-1xl lg:w-[60%] flex flex-col space-y-10 lg:space-y-0 items-center snapped">
             <p>
               creating several businesses from{" "}
               <span className="text-[#57BE94]">scratch</span> using our own
@@ -72,7 +72,7 @@ function Vision({ myref }) {
               operational and management methodologies.
             </p>{" "}
             <p>
-              By 2023, we want to establish Enterprice as a company capable of
+              By <span className="text-[#57BE94]">2023</span>, we want to establish Enterprice as a company capable of
               creating cutting-edge solutions that challenge conventional wisdom
               and push the boundaries of innovation in Africa's fast evolving
               technological environment.
@@ -81,8 +81,8 @@ function Vision({ myref }) {
         </div>
       </div>
 
-      <div className="hidden h-full md:flex justify-between w-full space-x-10">
-        <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left ">
+      <div className="hidden h-full md:flex justify-between w-full space-x-10 snapped">
+        <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left space-y-10 ">
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
@@ -108,7 +108,7 @@ function Vision({ myref }) {
             </span>{" "}
             a project
           </p>
-          <p>
+          <p className="font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -126,10 +126,10 @@ function Vision({ myref }) {
         ))}
       </div>
 
-      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto">
-        <div className="w-full md:w-[80%] md:w-full flex flex-col justify-center items-start text-left mt-10 lg:mt-0">
+      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto ">
+        <div className="w-full md:w-[80%] md:w-full flex flex-col justify-center items-start text-left mt-10 lg:mt-0 space-y-5">
           <p className="text-3xl font-bold">
-            <span className="inline-block">
+            <span className="inline-block snap-normal">
               <span
                 className="text-transparent"
                 style={{ WebkitTextStroke: "1px #57BE94" }}
@@ -153,13 +153,14 @@ function Vision({ myref }) {
             </span>{" "}
             a project
           </p>
-          <p>
+          <p className="font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
         </div>
+        <div className="snap-end space-y-5">
         {row1.map((row, index) => (
           <VisionImageCard
             key={index}
@@ -169,6 +170,7 @@ function Vision({ myref }) {
             className="w-full"
           />
         ))}
+        </div>
       </div>
 
       <div className="hidden h-full md:flex justify-between space-x-10">
@@ -181,7 +183,7 @@ function Vision({ myref }) {
             className="w-[30%]"
           />
         ))}
-        <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left ">
+        <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left space-y-10 snapped">
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
@@ -207,7 +209,7 @@ function Vision({ myref }) {
             </span>{" "}
             a project
           </p>
-          <p>
+          <p className="font-light"> 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -216,10 +218,10 @@ function Vision({ myref }) {
         </div>
       </div>
 
-      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto">
-        <div className="w-full md:w-[80%] md:w-full flex flex-col justify-center items-start text-left ">
+      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto snap-normal">
+        <div className="w-full md:w-[80%] md:w-full flex flex-col justify-center items-start text-left space-y-5">
           <p className="text-3xl font-bold">
-            <span className="inline-block">
+            <span className="inline-block snap-normal">
               <span
                 className="text-transparent"
                 style={{ WebkitTextStroke: "1px #FFAE00" }}
@@ -243,13 +245,14 @@ function Vision({ myref }) {
             </span>{" "}
             a project
           </p>
-          <p>
+          <p className="font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
         </div>
+        <div className="snap-end space-y-5">
         {row2.map((row, index) => (
           <VisionImageCard
             key={index}
@@ -259,9 +262,10 @@ function Vision({ myref }) {
             className="w-[30%]"
           />
         ))}
+        </div>
       </div>
-      <div className="hidden h-full md:flex hidden justify-between w-full space-x-10">
-        <div className="h-[300px] w-full flex flex-col justify-center items-start text-left">
+      <div className="hidden h-full md:flex hidden justify-between w-full space-x-10 snapped">
+        <div className="h-[300px] w-full flex flex-col justify-center items-start text-left space-y-10">
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span
@@ -287,7 +291,7 @@ function Vision({ myref }) {
             </span>{" "}
             a project
           </p>
-          <p>
+          <p className="font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -304,10 +308,10 @@ function Vision({ myref }) {
         ))}
       </div>
 
-      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto">
-        <div className="w-full md:w-[80%] md:w-full flex flex-col justify-center items-start text-left ">
+      <div className="h-full flex flex-col md:hidden justify-center items-center w-[90%] space-y-10 mx-auto snapped">
+        <div className="w-full md:w-[80%] md:w-full flex flex-col justify-center items-start text-left space-y-5">
           <p className="text-3xl font-bold">
-            <span className="inline-block w-[45%] ">
+            <span className="inline-block w-[45%] snap-normal">
               <span
                 className="text-transparent mr-5"
                 style={{ WebkitTextStroke: "1px #4F66AF" }}
@@ -331,13 +335,14 @@ function Vision({ myref }) {
             </span> {"  "}
              <span className="ml-2">a project</span>
           </p>
-          <p>
+          <p className="font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
         </div>
+        <div className="snap-end space-y-5">
         {row3.map((row, index) => (
           <VisionImageCard
             key={index}
@@ -346,6 +351,7 @@ function Vision({ myref }) {
             bottom={row.bottom}
           />
         ))}
+        </div>
       </div>
     </div>
   );

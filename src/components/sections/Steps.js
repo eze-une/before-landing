@@ -37,7 +37,7 @@ const list2 = [
   },
   {
     text1: "We",
-    highlitedText: "launch",
+    highlitedText: "launch !",
     text2:
       "implement our proposed strategies until it reaches a point where it shows market traction  ",
     color: "#57BE94",
@@ -70,10 +70,10 @@ function Steps() {
   return (
     <>
     <div className="w-full h-[2.5rem] flex justify-start items-center text-left mb-10">
-          <div className="lg:w-[12%] w-[10%] h-full bg-[#FFAE00] mr-10"></div>
-          <p className="font-bold text-3xl">WE TAKE SIMPLE APPROACH</p>
+          <div className="lg:w-[12%] w-[10%] h-full bg-[#FFAE00] mr-5 md:mr-10"></div>
+          <p className="font-bold text-2xl md:text-3xl">WE TAKE SIMPLE APPROACH</p>
         </div>
-    <m.div className="flex flex-col h-screen bg-blue-400 w-full overflow-y-scroll overscroll-auto z-0  scrollbar snapping  snapped">
+    <m.div className="flex flex-col h-screen w-full overflow-y-scroll overscroll-auto z-0  scrollbar snapping  snapped font-bold ">
       <m.div className="h-full w-full">
         {list2.map(({ color, text1, text2, highlitedText }, index1) => {
           return (
@@ -90,19 +90,19 @@ function Steps() {
               
               {/* right */}
               <m.div
-                className="w-full h-full lg:w-[50%] flex items-center justify-center text-center text-white text-3xl font-bold py-20"
+                className="w-full h-full px-[2rem] flex items-center justify-center text-left md:text-center text-white text-3xl md:text-4xl font-bold py-20 lg:w-[50%] md:px-[0rem]"
                 style={{ backgroundColor: color }}
               >
                 <p>
                   <m.span whileInView={() => setscrollIndex(index1)} variants={textVariant}>{text1} </m.span>
                   <m.span
                     variants={textVariant}
-                    className={index1==4?"mx-[-30px] text-[#131622]  inline-block ":"text-[#131622]  inline-block"}
+                    className={index1==4?" md:mx-[-0.6rem] text-[#131622]  inline-block ":"text-[#131622]  inline-block"}
                   >
                     {highlitedText}
                     <img
                       src={curvedUnderline}
-                      className="w-[90%] h-[21.07px]"
+                      className="md:w-[90%] h-[21.07px]"
                       alt="Flowbite Logo"
                     />
                   </m.span>{" "}
@@ -116,7 +116,7 @@ function Steps() {
       </m.div>
       
       {/* tab and desktop left */}
-      <div className="absolute text-left text-[#A7A9B1] space-y-10 ml-[15%] mt-[10%] text-3xl">
+      <div className="absolute text-left text-[#A7A9B1] space-y-[4rem] ml-[15%] mt-[10%] text-3xl">
         {list.map((item, index2) => (
           <div className="hidden lg:flex">
           <div
@@ -135,8 +135,8 @@ function Steps() {
             <p
               className={
                 index2 == scrollIndex
-                  ? "text-white text-5xl font-bold"
-                  : "text-gray-300"
+                  ? "text-white text-5xl"
+                  : "text-gray-300 font-light"
               }
             >
               {item}

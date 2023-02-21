@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion as m } from "framer-motion";
-import { AiFillLinkedin } from "react-icons/ai";
+import {FaLinkedinIn} from 'react-icons/fa';
 
 function TeamImage({image,link,name,position}) {
     const [isClicked, setisClicked] = useState(false);
@@ -17,16 +17,19 @@ function TeamImage({image,link,name,position}) {
       <div
         className={
           isClicked
-            ? "absolute flex flex-row justify-between items-start text-white bg-black w-[94%] pb-6 -mt-20 text-left px-2 rounded-t-[12px] "
-            : " rotate-[270deg] absolute z-10 -mt-[60%] text-white "
+            ? "absolute flex flex-row justify-between items-center text-white bg-[#131622] w-full pb-6 mt-[-9.8rem] text-left px-3 rounded-[12px] py-5 "
+            : " rotate-[270deg] absolute z-10 translate-y-[-12rem] text-white "
         }
       >
         <div className="flex flex-col text-left">
-          <p className="text-2xl font-bold">{name}</p>
+          <div>
+            
+          </div>
+          <p className="text-[30px] font-bold">{name}</p>
           <p className="">{position}</p>
         </div>
-        <div className={isClicked ? "pt-2" : "hidden"}>
-          <a href={link}><AiFillLinkedin /></a>
+        <div className={isClicked ? "text-2xl text-[#57BE94]" : "hidden"}>
+          <a href={link}><FaLinkedinIn/></a>
         </div>
       </div>
     </m.div>

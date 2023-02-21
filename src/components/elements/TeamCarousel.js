@@ -60,11 +60,11 @@ const teamlist = [
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -98,7 +98,7 @@ function TeamCarousel() {
     <Carousel
       responsive={responsive}
       swipeable={true}
-      className=" pb-[13rem] h-full"
+      className=" pb-[13rem] h-full snapped" 
     //   centerMode={tru}
       customRightArrow={<CustomRight />}
       customLeftArrow={<CustomLeft />}
