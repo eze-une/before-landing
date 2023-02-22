@@ -69,11 +69,7 @@ function Steps() {
   const [scrollIndex, setscrollIndex] = useState();  
   return (
     <>
-    {/* <div className="w-full h-[2.5rem] flex justify-start items-center text-left mb-10">
-          <div className="lg:w-[12%] w-[10%] h-full bg-[#FFAE00] mr-5 md:mr-10"></div>
-          <p className="font-bold text-2xl md:text-3xl">WE TAKE SIMPLE APPROACH</p>
-        </div> */}
-        <div className="w-full mb-[1rem]">
+        <div className="w-full mb-[2rem]">
         <div className="flex flex-row snap-normal">
           <div className="h-10 w-5 bg-[#FFAE00] w-[10%] lg:w-[12%] mr-5 md:mr-10"></div>
           <p className="text-2xl md:text-3xl text-left font-bold uppercase">

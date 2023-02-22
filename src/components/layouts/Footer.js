@@ -27,8 +27,8 @@ function Footer() {
       </div>
 
 
-      <div className="flex flex-col pt-10  sm:space-x-10 sm:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start pl-5 sm:p-10  text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0 "id="footer">
-        <div className="flex flex-col sm:justify-center md:items-center md:text-right text-left md:text-left  snap-normal">
+      <div className=" flex flex-col pt-10  sm:space-x-10 sm:flex-row bg-[#131622]  justify-center lg:justify-around items:center lg:items-start pl-5 sm:p-10  text-left text-[#D9DBE1] text-2xl space-y-10 lg:space-y-0 "id="footer">
+        <div className="flex flex-col sm:justify-start sm:mt-[3rem] lg:mt-0  md:items-center md:text-right text-left md:text-left  snap-normal">
           <img
             src={LogoImage}
             className="h-20 w-20  md:h-15 lg:h-full"
@@ -71,6 +71,53 @@ function Footer() {
           </div>
         </div>
       </div>
+
+      {/* <div className="w-full flex-col justify-start items-between bg-[#131622] text-white">
+      <div className="flex flex-col sm:justify-start sm:mt-[3rem] lg:mt-0  md:items-center md:text-right text-left md:text-left  snap-normal">
+          <img
+            src={LogoImage}
+            className="h-20 w-20  md:h-15 lg:h-full"
+            alt="Flowbite Logo"
+          />
+          <p className="font-bold text-2xl text-white">Ablaze</p>
+          <p className="text-2xl">Labs</p>
+        </div>
+        <div className="flex flex-col text-2xl">
+          <p className="font-bold text-white">Important Links</p>
+          <div className="font-light text-[17px]">
+            <p>About Us</p>
+            <p>Sand Box</p>
+            <p>The Studio</p>
+            <p>Carrers</p>
+            <p>Apply</p>
+          </div>
+        </div>
+        <div className="flex flex-row jusitfy-between items-between w-ful bg-green-900">
+        <div className=" w-[50%] flex flex-col items-start ">
+          <p className="font-bold text-white -left">Support</p>
+          <div className="font-light text-[17px]">
+            <p>Help center</p>
+            <p>Terms of Use</p>
+            <p>Legal</p>
+            <p>Privacy Policy</p>
+            <p>Events</p></div>
+        </div>
+        <div className="w-[50%] flex flex-col font-bold text-white pb-10 w-[80%]">
+          <p>Subscribe to our newsletter!</p>
+          <div className="flex flex-row items-left w-[90%] sm:w-full">
+            <input
+              type="text"
+              className="mt-1 block w-full px-3 py-2 bg-[#D9D9D9] bg-opacity-[20%]  rounded-[12px] text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 h-[54px]"
+              placeholder="Email"
+            />
+            <button className="bg-[#57BE94] h-[45px] rounded-[12px] text-md font-normal text-sm px-10 z-20  ml-[-130px] mt-[5px]">
+              Submit
+            </button>
+          </div>
+        </div>
+        </div> */}
+      {/* </div> */}
+
 
       {/* Copyright */}
       <div className="flex flex-col py-5 space-y-5 md:space-y-0 md:py-10 md:flex-row bg-[#131622] text-white items-start justify-between text-left pl-5 md:px-[10%] border-t-[1px] border-gray-500">
