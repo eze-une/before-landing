@@ -20,7 +20,7 @@ function Units() {
           How Do we make these true?
           </p>
         </div>
-        <div className="flex flex-col mt-10 items-center justify-center text-center  md:mx-[10%]  py-[10rem] lg:flex-row" >
+        <div className="flex flex-col mt-10 items-center justify-center text-center  md:mx-[10%]  pb-[10rem] lg:flex-row" >
           <p
             className="text-5xl font-bold lg:py-10 lg:text-left lg:text-7xl md:w-[55%] snapped"
             ref={textLineStart} 

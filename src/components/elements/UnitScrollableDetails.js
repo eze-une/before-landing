@@ -96,9 +96,9 @@ console.log("tutiuthtiuthiututi",EngineeringRef)
         }
       >
         <m.div className="h-full w-full">
-          {/* {
-            onScreen ? ( */}
-              
+          {
+            onScreen ? (
+              <>
                 <m.div
                   className="flex flex-col lg:flex-row h-full w-full snapper"
                   initial={"offscreen"}
@@ -214,7 +214,7 @@ console.log("tutiuthtiuthiututi",EngineeringRef)
                   </m.div>
 
                 </m.div>
-              {/* </>) : (
+               </>) : (
               <div className="flex flex-col lg:flex-row h-full w-full">
                 <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
                 <m.div
@@ -222,7 +222,7 @@ console.log("tutiuthtiuthiututi",EngineeringRef)
                   style={{ backgroundColor: "#57BE94" }}
                 > </m.div>
               </div>
-            )} */}
+            )} 
         </m.div>
 
         {/* tab and dektop */}
