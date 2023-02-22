@@ -4,7 +4,8 @@ import "react-multi-carousel/lib/styles.css";
 import TeamImage from "./TeamImage";
 import { BsArrowLeft } from "react-icons/bs";
 import { BsArrowRight } from "react-icons/bs";
-
+import {GoChevronRight} from "react-icons/go";
+import {GoChevronLeft} from "react-icons/go";
 const teamlist = [
   {
     name: "Person Person",
@@ -84,12 +85,12 @@ const arrowStyle = {
 
 const CustomRight = ({ onClick }) => (
     <button className="arrow right" onClick={onClick} style={arrowStyle}>
-      <BsArrowRight style={{ fontSize: "40px" }} />
+      <GoChevronRight style={{ fontSize: "40px" }} />
     </button>
   );
   const CustomLeft = ({ onClick }) => (
     <button className="arrow left" onClick={onClick} style={arrowStyle}>
-      <BsArrowLeft style={{ fontSize: "40px" }} />
+      <GoChevronLeft style={{ fontSize: "40px" }} />
     </button>
   );
 

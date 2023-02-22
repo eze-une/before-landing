@@ -101,7 +101,8 @@ html {
   height: 30px;
   border-radius: 25px;
   background: transparent;
-  outline: auto #57be94;
+  outline: none;
+  /* border: 1px solid #04aa6d ; */
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
@@ -109,6 +110,7 @@ html {
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
+  /* margin-bottom: ; */
   appearance: none;
   width: 25px;
   height: 25px;
@@ -117,7 +119,17 @@ html {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
 }
-
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #002200;
+  background: #20592800;
+  border-radius: 20px;
+  -webkit-border-radius:20px;
+  border: 2px solid #57BE94;
+}
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
@@ -270,4 +282,31 @@ ul {
   -webkit-border-radius:1rem;
   -moz-border-radius:1rem;
 
+}
+
+.outlined{
+  color: black;
+	font-size: 80px;
+	-webkit-text-stroke: 1px black;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+.outlined-start{
+  color: black;
+	font-size: 30px;
+	-webkit-text-stroke: 1px #57BE94;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+.outlined-scale{
+  color: black;
+	font-size: 30px;
+	-webkit-text-stroke: 1px #FFAE00;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+.outlined-monitor{
+  color: black;
+	font-size: 30px;
+	-webkit-text-stroke: 1px #4F66AF;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0);
 }

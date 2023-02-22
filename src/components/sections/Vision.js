@@ -85,8 +85,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
-                className=" text-transparent"
-                style={{ WebkitTextStroke: "1px #57BE94" }}
+                className=" text-transparent text-3xl outlined-start"
               >
                 Start
               </span>
@@ -139,9 +138,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
-                className="text-transparent"
-                style={{ WebkitTextStroke: "1px #FFAE00" }}
-              >
+                className="text-transparent text-3xl outlined-scale"              >
                 Scale
               </span>
               <svg
@@ -175,8 +172,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span
-                className="text-transparent mr-5"
-                style={{ WebkitTextStroke: "1px #4F66AF" }}
+                className="text-transparent mr-5 outlined-monitor"
               >
                 Monitior{" "}
               </span>
@@ -267,8 +263,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block snap-normal">
               <span
-                className="text-transparent"
-                style={{ WebkitTextStroke: "1px #FFAE00" }}
+                className="text-transparent .outlined-scale"
               >
                 Scale
               </span>
@@ -315,8 +310,8 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] snap-normal">
               <span
-                className="text-transparent mr-5"
-                style={{ WebkitTextStroke: "1px #4F66AF" }}
+                className="text-transparent mr-5 outlined-monitor"
+                // style={{ WebkitTextStroke: "1px #4F66AF" }}
               >
                 Monitior
               </span>

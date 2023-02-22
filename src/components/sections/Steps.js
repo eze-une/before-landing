@@ -91,12 +91,12 @@ function useOnScreen(ref, rootMargin = "0px") {
 
 function Steps() {
   const ref = useRef();
-  const onScreen = useOnScreen(ref, "-400px");
+  const onScreen = useOnScreen(ref, "-30%");
 
   const [scrollIndex, setscrollIndex] = useState();
   return (
     <>
-      <div className="w-full mb-[2rem]">
+      <div className="w-full mb-[4rem]">
         <div className="flex flex-row">
           <div className="h-10 w-5 bg-[#FFAE00] w-[10%] lg:w-[12%] mr-5 md:mr-10"></div>
           <p className="text-2xl md:text-3xl text-left font-bold uppercase">

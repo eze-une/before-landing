@@ -67,7 +67,7 @@ function Units() {
                 </AnchorLink>
 
 
-                <AnchorLink href="#">
+                <AnchorLink href="#units">
                   <div
                     className="flex flex-col w-[4rem] h-60 bg-white text-left items-center lg:w-full lg:justify-start lg:h-[5rem] lg:flex-row"
                     id="enginnering" 
@@ -77,7 +77,7 @@ function Units() {
                     <p className="text-[#4F66AF] font-light mt-3 lg:mt-0 translate-y-[200%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:mx-5">ENGINEERING</p>
                   </div>
                 </AnchorLink>
-                <AnchorLink href="#">
+                <AnchorLink href="#units">
                   <div
                     className="flex flex-col w-[4rem] h-60 bg-white text-left items-center lg:w-full  lg:justify-start lg:h-[5rem] lg:flex-row"
                     id="sandbox" onClick={()=>setscrollToSandox(true)}

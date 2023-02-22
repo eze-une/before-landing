@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import curvedUnderline from "../../assets/Vector 336.png";
 import Eyes from "../../assets/Group 1929.png";
-import RobotHand from "../../assets/Group 1930.png";
+import RobotHand from "../../assets/Group 1930.svg";
 import Header from "../layouts/Header";
 
 function Hero({sliderRange,setsliderRange}) {
   return (
-    <div className="bg-[#E7F0F5] w-full mx-5 md:w-[80%] h-[100vh] flex flex-col snap-normal" id="hero">
+    <div className="bg-[#E7F0F5] w-full mx-5 md:w-[80%] h-[105vh] flex flex-col snap-normal" id="hero">
       <Header />
       
       <div className=" flex flex-row items-center justify-between h-[75%] ">
@@ -16,8 +16,7 @@ function Hero({sliderRange,setsliderRange}) {
             We build{" "}
             <span className="inline-block">
               <span
-                className=" text-[#E7F0F5]"
-                style={{ WebkitTextStroke: "1px black" }}
+                className=" text-[#E7F0F5] outlined text-2xl"
               >
                 crazy
               </span>
