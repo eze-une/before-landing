@@ -2,7 +2,7 @@ import React from "react";
 
 function VisionImageCard({ image, top, bottom }) {
   return (
-    <div className="h-[300px] xsm:w-[30rem] sm:w-[32rem] lg:w-[80%] md:w-full  flex justify-center items-end">
+    <div className="h-[300px] xsm:w-[30rem] sm:w-[32rem]  md:w-full  flex justify-center items-end">
       <div className=" h-full w-full relative z-0">
         <img
           src={image}
