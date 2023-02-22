@@ -8,21 +8,23 @@ import Twitter from "../../assets/socials/Group 1934.png";
 function Footer() {
   return (
     <div className="flex flex-col snap-end">
-      <div className="flex flex-col lg:flex-row items-center justify-center text-left lg:p-20 h-full sm:px-[3rem]">
-        <div className="w-full h-full px-5 md:px-10  lg:w-[50%] text-4xl md:text-5xl font-bold py-10 snap-normal">
-          <p>Do you have an idea that you want to see alive?</p>
-        </div>
-        <div className="flex flex-col items-center w-full h-full lg:w-[50%] p-5  md:p-10  text-2xl md:text-3xl font-light snapped">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <br />
-          <button className="bg-[#57BE94] rounded-[10px] text-white w-[80%] lg:w-full p-2">
-            Contact Us
-          </button>
+      <div className="flex flex-col lg:flex-row  text-left h-full  ">
+        <div className="flex flex-col md:flex-row h-[30rem] sm:px-[3rem] sm:items-end sm:justify-end md:py-20 ">
+          <div className="flex justify-center h-[50%] md:h-full md:items-center items-end w-full h-full  px-5  md:w-[50%] text-4xl lg:text-[3rem] lg:px-10 font-bold py-0 xl:px-[5rem]">
+            <p>Do you have an idea that you want to see alive?</p>
+          </div>
+          <div className="flex flex-col px-10 py-5 h-full items-center  h-full md:w-[50%]  md:p-10  font-light snapped flex justify-center items-center">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+            <br />
+            <button className="bg-[#57BE94] rounded-[10px] text-white w-full p-2">
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
 
@@ -74,15 +76,15 @@ function Footer() {
 
       <div className="hidden sm:flex md:hidden w-full flex-col justify-start items-between bg-[#131622] text-white w-full px-10 py-10 space-y-10">
         <div className=" flex  ">
-          <div className="w-[50%] justify-start items-start h-full flex flex-col snap-normal mx-0">
+          <div className="w-[50%] justify-start items-center  h-full flex flex-col snap-normal mx-0">
             <div className="flex flex-col justify-start items-left">
-            <img
-              src={LogoImage}
-              className="h-20 w-20  md:h-15 lg:h-full"
-              alt="Flowbite Logo"
-            />
-            <p className="font-bold text-2xl text-white">Ablaze</p>
-            <p className="text-2xl">Labs</p>
+              <img
+                src={LogoImage}
+                className="h-20 w-20  md:h-15 lg:h-full"
+                alt="Flowbite Logo"
+              />
+              <p className="font-bold text-2xl text-white">Ablaze</p>
+              <p className="text-2xl">Labs</p>
             </div>
           </div>
           <div className="flex flex-col font-bold items-left text-2xl w-[50%] ">
@@ -100,7 +102,7 @@ function Footer() {
         </div>
         <div className="flex flex-row items-left">
           <div className="  flex flex-col justify-left items-left w-full w-[50%]">
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-center  ">
               <p className="font-bold text-2xl text-white">Support</p>
               <div className="text-left font-light text-[17px]">
                 <p>Help center</p>

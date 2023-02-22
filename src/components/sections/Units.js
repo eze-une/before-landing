@@ -13,8 +13,8 @@ function Units() {
   console.log("sargasfgadf",scrollToSandox);
   return (
     <>
-      <div className="flex flex-col h-full w-full space-y-20 lg:space-y-0 snapped bg-[#F6F9FF]">
-        <div className="flex flex-row snap-normal">
+      <div className="flex flex-col h-full w-full space-y-20 lg:space-y-0 snapped bg-[#F6F9FF] ">
+        <div className="flex flex-row snap-normal my-[4rem]">
           <div className="h-10 w-5 bg-[#FFAE00] w-[10%] lg:w-[12%] mr-10"></div>
           <p className="text-3xl text-left font-bold uppercase">
           How Do we make these true?
@@ -26,10 +26,10 @@ function Units() {
             ref={textLineStart} 
           >
             These Are The{" "}
-            <span className="inline-block">
+            <span className="inline-block relative">
               <span
-                className="text-transparent"
-                style={{ WebkitTextStroke: "1px black" }}
+                className="outline text-[#F6F9FF]  z-0"
+          
               >
                 Units
               </span>
@@ -40,6 +40,7 @@ function Units() {
                 viewBox="0 0 91 15"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="absolute z-10 mt-[-5 px]"
               >
                 <path
                   d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"
@@ -62,7 +63,7 @@ function Units() {
                     id="labs"
                   >
                     <div className="bg-[#57BE94] w-full h-3  lg:h-full lg:w-2"></div>
-                    <p className="text-[#57BE94] font-light mt- lg:mt-0 translate-y-[50%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:mx-5">LABS</p>
+                    <p className="text-[#57BE94] font-light mt- lg:mt-0 translate-y-[80%] rotate-[90deg] lg:rotate-[0deg] lg:translate-y-0 lg:mx-5">LABS</p>
                   </div>
                 </AnchorLink>
 
@@ -111,7 +112,7 @@ function Units() {
       />
 
       {/* bottom scrollable part */}
-      <UnitScrollableDetails scrollToSandox={scrollToSandox} setscrollToSandox={setscrollToSandox} scrollToEngineering={scrollToEngineering} setscrollToEngineering={setscrollToEngineering}/>
+      <UnitScrollableDetails className="behaviour" scrollToSandox={scrollToSandox} setscrollToSandox={setscrollToSandox} scrollToEngineering={scrollToEngineering} setscrollToEngineering={setscrollToEngineering}/>
     </>
   );
 }

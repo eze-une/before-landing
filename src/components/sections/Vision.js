@@ -85,7 +85,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
-                className=" text-transparent text-3xl outlined-start"
+                className=" text-[#ffffff] text-[1.9rem] outlined-start"
               >
                 Start
               </span>
@@ -138,7 +138,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block">
               <span
-                className="text-transparent text-3xl outlined-scale"              >
+                className="text-[#ffffff] text-3xl outlined-scale"              >
                 Scale
               </span>
               <svg
@@ -172,9 +172,9 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span
-                className="text-transparent mr-5 outlined-monitor"
+                className="text-[#ffffff] mr-[4rem] xl:mr-0 outlined-monitor"
               >
-                Monitior{" "}
+                Monitor{" "}
               </span>
               <svg
                 width="full"
@@ -216,7 +216,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block snap-normal">
               <span
-                className="text-transparent"
+                className="text-[#ffffff]"
                 style={{ WebkitTextStroke: "1px #57BE94" }}
               >
                 Start
@@ -263,7 +263,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block snap-normal">
               <span
-                className="text-transparent .outlined-scale"
+                className="text-[#ffffff] .outlined-scale"
               >
                 Scale
               </span>
@@ -310,10 +310,10 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] snap-normal">
               <span
-                className="text-transparent mr-5 outlined-monitor"
+                className="text-[#ffffff] mr-5 outlined-monitor"
                 // style={{ WebkitTextStroke: "1px #4F66AF" }}
               >
-                Monitior
+                Monitor
               </span>
               <svg
                 width="full"

@@ -17,7 +17,7 @@ function TeamImage({image,link,name,position}) {
       <div
         className={
           isClicked
-            ? "absolute flex flex-row justify-between items-center text-white bg-[#131622] w-full pb-6 mt-[-9.8rem] text-left px-3 rounded-[12px] py-5 "
+            ? "absolute flex flex-row justify-between items-center text-white bg-[#131622] w-full pb-6 mt-[-7rem] text-left px-3 rounded-[12px] py-5 "
             : " rotate-[270deg] absolute z-10 translate-y-[-12rem] text-white "
         }
       >

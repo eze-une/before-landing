@@ -71,150 +71,173 @@ function useOnScreen(ref, rootMargin = "0px") {
 
 function UnitScrollableDetails({ scrollToSandox, setscrollToSandox, scrollToEngineering, setscrollToEngineering }) {
   const [scrollIndex, setscrollIndex] = useState();
+  const [Y, setY] = useState();
+  const [X, setX] = useState();
+
   const EngineeringRef = useRef(null);
   const SandboxRef = useRef(null);
+  const labsRef = useRef(null);
   const ref = useRef();
-  const onScreen = useOnScreen(ref, "-20%");
+  const onScreen = useOnScreen(ref, "-30%");
 
+  const getPosition = () => {
+    const y = ref.current.offsetTop;
+    const x = ref.current.offsetLeft;
+    setX(x);
+    setY(y)
+  }
+
+  useEffect(() => {
+    getPosition();
+  }, []);
+
+  // Re-calculate X and Y of the red box when the window is resized by the user
+  useEffect(() => {
+    window.addEventListener("resize", getPosition);
+  }, []);
+
+  if (onScreen) {
+    // window.scrollTo({ top: Y, left: X ,behavior:"smooth"})
+    window.scrollTo({ top: Y, left: X})
+  }
   if (scrollToEngineering) {
-    console.log("hasjdghbasdg",EngineeringRef.current)
-    EngineeringRef.current?.scrollIntoView(({ behavior: 'smooth' }));
+    console.log("hasjdghbasdg", EngineeringRef.current)
+    // EngineeringRef.current?.scrollIntoView(({ behavior: 'smooth' }));
+    EngineeringRef.current?.scrollIntoView();
     setscrollToEngineering(false);
   }
   if (scrollToSandox) {
-    SandboxRef.current?.scrollIntoView(({ behavior: 'smooth' }));
+    SandboxRef.current?.scrollIntoView();
     setscrollToSandox(false);
   }
-console.log("tutiuthtiuthiututi",EngineeringRef)
 
   return (
     <>
       <m.div
         className="flex flex-col h-screen w-full overflow-y-scroll overscroll-auto z-0 snapping scrollbar snapper  "
         id="units"
-        ref={ref
-        }
+        ref={ref}
       >
         <m.div className="h-full w-full">
-          {/* {
-            onScreen ? ( */}
-              
-                <m.div
-                  className="flex flex-col lg:flex-row h-full w-full snapper"
-                  initial={"offscreen"}
-                  whileInView={"onscreen"}
-                  viewport={{ once: false, amount: 0.7 }}
-                  transition={{ staggerChildren: 0.2 }}
+          <m.div
+            className="flex flex-col lg:flex-row h-full w-full snapper"
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            ref={labsRef}
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
+            <m.div
+              className="w-full h-full lg:w-[50%] font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
+              style={{ backgroundColor: "#57BE94" }}
+            >
+              <m.div className="flex" variants={textVariant}>
+                <div className="h-full w-10 md:w-3 bg-white mr-5"></div>
+                <m.p
+                  variants={textVariant}
+                  className="text-left font-bold"
+                  whileInView={() => setscrollIndex(0)}
                 >
-                  <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
-                  <m.div
-                    className="w-full h-full lg:w-[50%] font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
-                    style={{ backgroundColor: "#57BE94" }}
-                  >
-                    <m.div className="flex" variants={textVariant}>
-                      <div className="h-full w-10 md:w-3 bg-white mr-5"></div>
-                      <m.p
-                        variants={textVariant}
-                        className="text-left font-bold"
-                        whileInView={() => setscrollIndex(0)}
-                      >
-                        "We are exceedingly focusing on high quality and cost effective implementation of services. We are advancing at a tremendous pace, with the involvement of skilled and experienced team working on organization",
+                  "We are exceedingly focusing on high quality and cost effective implementation of services. We are advancing at a tremendous pace, with the involvement of skilled and experienced team working on organization",
 
-                      </m.p>
-                    </m.div>
-                    <br />
-                    <m.p
-                      variants={textVariant}
-                      className="text-left "
-                    >
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-                    </m.p>
-                    <br />
-                    <m.p variants={textVariant} className="text-left  hidden md:block">
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    </m.p>
-                  </m.div>
-                </m.div>
+                </m.p>
+              </m.div>
+              <br />
+              <m.p
+                variants={textVariant}
+                className="text-left "
+              >
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+              </m.p>
+              <br />
+              <m.p variants={textVariant} className="text-left  hidden md:block">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+              </m.p>
+            </m.div>
+          </m.div>
 
 
-                <m.div
-                  className="flex flex-col lg:flex-row h-full w-full snapper"
-                  ref={EngineeringRef}
-                  initial={"offscreen"}
-                  whileInView={"onscreen"}
-                  viewport={{ once: false, amount: 0.7 }}
-                  transition={{ staggerChildren: 0.2 }}
+          <m.div
+            className="flex flex-col lg:flex-row h-full w-full snapper"
+            ref={EngineeringRef}
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            id="labs"
+
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-5  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
+            <m.div
+              className="w-full h-full lg:w-[50%] font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
+              style={{ backgroundColor: "#4F66AF" }}
+            >
+              <m.div className="flex" variants={textVariant}>
+                <div className="h-full w-10 md:w-3 bg-white mr-5"></div>
+                <m.p
+                  variants={textVariant}
+                  className="text-left font-bold"
+                  whileInView={() => setscrollIndex(1)}
                 >
-                  <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-5  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
-                  <m.div
-                    className="w-full h-full lg:w-[50%] font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
-                    style={{ backgroundColor: "#4F66AF" }}
-                  >
-                    <m.div className="flex" variants={textVariant}>
-                      <div className="h-full w-10 md:w-3 bg-white mr-5"></div>
-                      <m.p
-                        variants={textVariant}
-                        className="text-left font-bold"
-                        whileInView={() => setscrollIndex(1)}
-                      >
-                        "We are exceedingly focusing on high quality and cost effective implementation of services. We are advancing at a tremendous pace, with the involvement of skilled and experienced team working on organization",
+                  "We are exceedingly focusing on high quality and cost effective implementation of services. We are advancing at a tremendous pace, with the involvement of skilled and experienced team working on organization",
 
-                      </m.p>
-                    </m.div>
-                    <br />
-                    <m.p
-                      variants={textVariant}
-                      className="text-left "
-                    >
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-                    </m.p>
-                    <br />
-                    <m.p variants={textVariant} className="text-left hidden md:block ">
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    </m.p>
-                  </m.div>
+                </m.p>
+              </m.div>
+              <br />
+              <m.p
+                variants={textVariant}
+                className="text-left "
+              >
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+              </m.p>
+              <br />
+              <m.p variants={textVariant} className="text-left hidden md:block ">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+              </m.p>
+            </m.div>
 
-                  {/* snadbox */}
-                </m.div>
-                <m.div
-                  className="flex flex-col lg:flex-row h-full w-full snapper"
-                  ref={SandboxRef}
-                  initial={"offscreen"}
-                  whileInView={"onscreen"}
-                  viewport={{ once: false, amount: 0.7 }}
-                  transition={{ staggerChildren: 0.2 }}
+            {/* snadbox */}
+          </m.div>
+          <m.div
+            className="flex flex-col lg:flex-row h-full w-full snapper"
+            ref={SandboxRef}
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
+            <m.div
+              className="w-full h-full lg:w-[50%] md:text-1xl font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
+              style={{ backgroundColor: "#FFAE00" }}
+            >
+              <m.div className="flex" variants={textVariant}>
+                <div className="h-full w-10 md:w-3 bg-white mr-5"></div>
+                <m.p
+                  variants={textVariant}
+                  className="text-left font-bold"
+                  whileInView={() => setscrollIndex(2)}
                 >
-                  <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
-                  <m.div
-                    className="w-full h-full lg:w-[50%] md:text-1xl font-light flex flex-col items-center justify-center text-white px-3 py-10 md:p-20"
-                    style={{ backgroundColor: "#FFAE00" }}
-                  >
-                    <m.div className="flex" variants={textVariant}>
-                      <div className="h-full w-10 md:w-3 bg-white mr-5"></div>
-                      <m.p
-                        variants={textVariant}
-                        className="text-left font-bold"
-                        whileInView={() => setscrollIndex(2)}
-                      >
-                        "We are exceedingly focusing on high quality and cost effective implementation of services. We are advancing at a tremendous pace, with the involvement of skilled and experienced team working on organization",
+                  "We are exceedingly focusing on high quality and cost effective implementation of services. We are advancing at a tremendous pace, with the involvement of skilled and experienced team working on organization",
 
-                      </m.p>
-                    </m.div>
-                    <br />
-                    <m.p
-                      variants={textVariant}
-                      className="text-left "
-                    >
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-                    </m.p>
-                    <br />
-                    <m.p variants={textVariant} className="text-left  hidden md:block ">
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    </m.p>
-                  </m.div>
+                </m.p>
+              </m.div>
+              <br />
+              <m.p
+                variants={textVariant}
+                className="text-left "
+              >
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+              </m.p>
+              <br />
+              <m.p variants={textVariant} className="text-left  hidden md:block ">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+              </m.p>
+            </m.div>
 
-                </m.div>
-              {/* </>) : (
+          </m.div>
+          {/* </>) : (
               <div className="flex flex-col lg:flex-row h-full w-full">
                 <div className="hidden lg:flex flex-col w-[50%] h-full bg-[#131622] space-y-10  justify-center items-center text-[#A7A9B1] text-left text-3xl"></div>
                 <m.div

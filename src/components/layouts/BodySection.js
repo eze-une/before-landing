@@ -8,8 +8,10 @@ import Vision from '../sections/Vision'
 
 function BodySection() {
   const [sliderRange, setsliderRange] = useState(20);
+  const [inview, setinview]=useState(false);
+  let val;
   const myref = useRef();
-  
+  const stepsref=useRef();
   useEffect(() => {
     if(sliderRange>=80){
       window.scrollTo({
@@ -17,9 +19,11 @@ function BodySection() {
         behavior: 'smooth',
       });
       setsliderRange(10);
-      console.log("sdfgdfg",myref)
+      // console.log("sdfgdfg",myref)
     }
   }, [sliderRange])
+
+
   return (
     <div className='w-full'>
       <div className='flex flex-col items-center justify-center h-full mx-auto snap-y snap-proximity '>
@@ -28,10 +32,10 @@ function BodySection() {
 
         </div>
         <Vision className="snap-normal" myref={myref}/>   
-        <Steps  className="snap-center snap-always container"/>
+        <Steps  className="snap-center snap-always container" ref={stepsref} setinview={setinview} val={val}/>
         {/* <SecondSteps />  */}
-        <Teams  className="snap-always snap-center "/>   
-        <Units className="snap-always   sn  ap-center" />
+        <Teams/>   
+        <Units   />
       </div>
     </div>
   )

@@ -12,17 +12,17 @@ function Hero({sliderRange,setsliderRange}) {
       <div className=" flex flex-row items-center justify-between h-[75%] ">
         {/* left */}
         <div className="w-full flex flex-col h-full w-full lg:w-[50%] items-start justify-center text-left">
-          <h1 className="text-5xl md:text-8xl lg:text-7xl text-left font-bold mb-10">
+          <h1 className="text-5xl md:text-8xl lg:text-7xl text-left font-bold mb-10 ">
             We build{" "}
-            <span className="inline-block">
+            <span className="inline-block relative">
               <span
-                className=" text-[#E7F0F5] outlined text-2xl"
+                className=" text-[#E7F0F5] outline text-[3.5rem] md:text-[7rem] lg:text-[5rem] z-0"
               >
                 crazy
               </span>
               <img
                 src={curvedUnderline}
-                className="w-[125px] h-[21.07px]"
+                className="w-[125px] h-[21.07px] mt-[-.4rem] z-10 absolute"
                 alt="Flowbite Logo"
               />
             </span>
