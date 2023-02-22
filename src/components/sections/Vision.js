@@ -7,30 +7,29 @@ import VisionImageCard from "../elements/VisionImageCard";
 
 const row1 = [
   {
-    image:
-      "https://img.freepik.com/free-photo/robot-handshake-human-background-futuristic-digital-age_53876-129770.jpg?w=1060&t=st=1672987368~exp=1672987968~hmac=f88259dd36b561c786be919d12377feb562f467d0c25ddfa744d5bf094c8ac25",
-    top: "Put",
-    bottom: "Investment",
-  },
-  {
-    image:
-      "https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=2000",
-    top: "Start",
-    bottom: "Project",
-  },
-];
-const row2 = [
-  {
-    image:
-      "https://img.freepik.com/free-photo/robot-handshake-human-background-futuristic-digital-age_53876-129770.jpg?w=1060&t=st=1672987368~exp=1672987968~hmac=f88259dd36b561c786be919d12377feb562f467d0c25ddfa744d5bf094c8ac25",
+    image:"https://img.freepik.com/free-photo/robot-handshake-human-background-futuristic-digital-age_53876-129770.jpg?w=1380&t=st=1677054523~exp=1677055123~hmac=01009dfb8aeafb017bc0bf88daef1641be141119b3b6f8bef54074225dbc05ba",
+    // top: "Put",
+    // bottom: "Investment",
     top: "Ideate",
     bottom: "Startup",
   },
   {
     image:
-      "https://img.freepik.com/free-photo/ai-nuclear-energy-background-future-innovation-disruptive-technology_53876-129783.jpg",
+    "https://img.freepik.com/free-photo/ai-nuclear-energy-background-future-innovation-disruptive-technology_53876-129783.jpg",      
     top: "Make",
     bottom: "Research",
+  },
+];
+const row2 = [
+  {
+    image:"https://img.freepik.com/free-photo/man-wearing-smart-glasses-touching-virtual-screen-futuristic-technology-digital-remix_53876-104247.jpg?w=1380&t=st=1677054647~exp=1677055247~hmac=66e55a6cec5229ffb3d23666c9a92e5b62ceec20375a09e8fe601cad8ba6d061",
+    top: "Put",
+      bottom: "Investment",
+  },
+  {
+    image:"https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=1480&t=st=1677054722~exp=1677055322~hmac=3276b08300f08d6e736c13f8ef983cfb7244d96a9f43ec104df3df65c1fe9eef",
+    top: "Start",
+    bottom: "Project",
   },
 ];
 const row3 = [
@@ -80,7 +79,7 @@ function Vision({ myref }) {
           </div>
         </div>
       </div>
-
+    
       <div className="hidden h-full md:flex justify-between w-full space-x-10 snapped">
         <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left lg:space-y-10 ">
           <p className="text-3xl font-bold">
