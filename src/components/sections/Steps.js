@@ -94,7 +94,7 @@ function Steps() {
   const tref = useRef();
   // const mobileRef=useRef();
   // const onScreenMobile=useOnScreen(mobileRef,"-20%");
-  const onScreen = useOnScreen(tref, "-10%");
+  const onScreen = useOnScreen(tref, "-20%");
   
   
   // const [YMobile, setYMobile] = useState();

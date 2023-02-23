@@ -4,15 +4,15 @@ import Eyes from "../../assets/Group 1929.png";
 import RobotHand from "../../assets/Group 1930.svg";
 import Header from "../layouts/Header";
 
-function Hero({sliderRange,setsliderRange}) {
+function Hero({ sliderRange, setsliderRange }) {
   return (
     <div className="bg-[#E7F0F5] w-full mx-5 md:w-[80%] h-[105vh] flex flex-col snap-normal" id="hero">
       <Header />
-      
+
       <div className=" flex flex-row items-center justify-between h-[75%] ">
         {/* left */}
         <div className="w-full flex flex-col h-full w-full lg:w-[50%] items-start justify-center text-left">
-          <h1 className="text-5xl md:text-8xl lg:text-7xl text-left font-bold mb-10 ">
+          <h1 className="text-5xl md:text-8xl lg:text-7xl text-left font-bold mb-10 leading-[5rem]">
             We build{" "}
             <span className="inline-block relative">
               <span
@@ -57,7 +57,7 @@ function Hero({sliderRange,setsliderRange}) {
       </div>
       <div className="flex flex-col items-center justify-center text-center m-2">
         <div className="rotate-[90deg]  h-[60px] w-[60px] items-center justify-center ">
-          <input type="range" className="slider " min="1" max="100" value={sliderRange} onChange={e => setsliderRange (e.target.value)}/>
+          <input type="range" className="slider " min="1" max="100" value={sliderRange} onChange={e => setsliderRange(e.target.value)} />
         </div>
         <p className="text-[#57BE94] ml-5">EXPLORE MORE</p>
       </div>

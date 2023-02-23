@@ -78,7 +78,7 @@ function UnitScrollableDetails({ scrollToSandox, setscrollToSandox, scrollToEngi
   const SandboxRef = useRef(null);
   const labsRef = useRef(null);
   const ref = useRef();
-  const onScreen = useOnScreen(ref, "-30%");
+  const onScreen = useOnScreen(ref, "-20%");
 
   const getPosition = () => {
     const y = ref.current.offsetTop;

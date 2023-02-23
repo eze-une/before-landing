@@ -133,7 +133,7 @@ function Header() {
       <div className={show ? "flex" : "hidden"}>
         <m.div
           animate={show ? showside : hide}
-          className="z-10 absolute right-0 top-0 h-full w-full  md:h-[100vh] md:w-[30%] bg-white sidebar"
+          className="z-20 absolute right-0 top-0 h-full w-full  md:h-[100vh] md:w-[30%] bg-white sidebar"
         >
           <m.div className="flex flex-col items-center justify-center">
             <div className="w-full text-2xl flex justify-end items-end text-right p-10 hover:cursor-pointer">

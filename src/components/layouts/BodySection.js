@@ -15,7 +15,7 @@ function BodySection() {
   useEffect(() => {
     if(sliderRange>=80){
       window.scrollTo({
-        top: myref.current.offsetTop-80,
+        top: myref.current.offsetTop,
         behavior: 'smooth',
       });
       setsliderRange(10);
