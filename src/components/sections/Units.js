@@ -40,7 +40,7 @@ function Units() {
                 viewBox="0 0 91 15"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute z-10 mt-[-5 px]"
+                className="absolute z-10 mt-[-6px]"
               >
                 <path
                   d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"

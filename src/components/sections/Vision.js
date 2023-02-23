@@ -216,8 +216,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block snap-normal">
               <span
-                className="text-[#ffffff]"
-                style={{ WebkitTextStroke: "1px #57BE94" }}
+                className="text-[#ffffff] outlined-start"
               >
                 Start
               </span>
@@ -263,7 +262,7 @@ function Vision({ myref }) {
           <p className="text-3xl font-bold">
             <span className="inline-block snap-normal">
               <span
-                className="text-[#ffffff] .outlined-scale"
+                className="text-[#ffffff] outlined-scale"
               >
                 Scale
               </span>
