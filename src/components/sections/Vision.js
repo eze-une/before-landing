@@ -168,11 +168,11 @@ function Vision({ myref }) {
       </div>
 
       <div className="hidden h-full md:flex hidden justify-between w-full space-x-10 snapped">
-        <div className="h-[300px] w-full flex flex-col justify-center items-start text-left slg:pace-y-10">
+        <div className="h-[300px] w-full flex flex-col justify-center items-start text-left slg:pace-y-10 md:mr-[-1.3rem]">
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span
-                className="text-[#ffffff] mr-[4rem] xl:mr-0 outlined-monitor"
+                className="text-[#ffffff] md:mr-[8.1rem] lg:mr-0 xl:mr-0 outlined-monitor"
               >
                 Monitor{" "}
               </span>
@@ -329,7 +329,7 @@ function Vision({ myref }) {
                 />
               </svg>
             </span> {"  "}
-             <span className="ml-2">a project</span>
+             <span className="">a project</span>
           </p>
           <p className="font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
