@@ -22,7 +22,7 @@ function Hero({sliderRange,setsliderRange}) {
               </span>
               <img
                 src={curvedUnderline}
-                className="w-[125px] h-[21.07px] mt-[-.4rem] z-10 absolute"
+                className="w-[125px] h-[21.07px] mt-[-.4rem] z-5 absolute"
                 alt="Flowbite Logo"
               />
             </span>
