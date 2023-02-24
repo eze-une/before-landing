@@ -9,7 +9,7 @@ function Footer() {
   return (
     <div className="flex flex-col snap-end">
       <div className="flex flex-col lg:flex-row  text-left h-full  ">
-        <div className="flex flex-col md:flex-row h-[25rem] sm:px-[3rem] sm:items-end sm:justify-end md:py-20 ">
+        <div className="flex flex-col md:flex-row h-[30rem] sm:h-[25rem] sm:px-[3rem] sm:items-end sm:justify-end md:py-20 ">
           <div className="flex justify-center h-[50%] md:items-center  md:h-full items-end w-full h-full  px-5  md:w-[50%] text-4xl lg:text-[3rem] lg:leading-[3rem] lg:px-10 font-bold py-0 xl:px-[5rem]">
             <p>Do you have an idea that you want to see alive?</p>
           </div>
