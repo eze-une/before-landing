@@ -63,11 +63,6 @@ const teamlist = [
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    // <div
-    //   className={className}
-    //   style={{ ...style, display: "block",marginLeft:'-30px',transform: "scale(2)"}}
-    //   onClick={onClick}
-    // />
     <div style={{ ...style, display: "block" }}
     onClick={onClick}
     className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute ml-[95%]  mt-[-13.6rem]">
@@ -79,14 +74,9 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    // <div
-    //   className={className}
-    //   style={{ ...style, display: "block", background: "",transform: "scale(2)" }}
-    //   onClick={onClick}
-    // />
     <div style={{ ...style, display: "block" }}
       onClick={onClick}
-      className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute m mt-[12.8rem]">
+      className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute mt-[12.8rem]">
        <GoChevronLeft />
     </div>
   );
@@ -95,7 +85,7 @@ function SamplePrevArrow(props) {
 export default class MultipleItems extends Component {
   render() {
     const settings = {
-      dots: false,
+      dots: true,
       infinite: false,
       speed: 500,
       slidesToShow: 4,
@@ -104,20 +94,49 @@ export default class MultipleItems extends Component {
       prevArrow: <SamplePrevArrow />,
       responsive: [
         {
-          breakpoint: 1500,
-          dots: false,
+          breakpoint: 1700,
+          dots: true,
           settings: {
-            slidesToShow: 4,
-            slidesToScroll: 3,
+            slidesToShow: 3.2 ,
+            slidesToScroll: 1,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 1600,
+          dots: true,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 1500,
+          dots: true,
+          settings: {
+            slidesToShow: 2.7,
+            slidesToScroll: 1,
             dots: true,
           },
         },
         {
           breakpoint: 1300,
+          dots: true,
+          settings: {
+            slidesToShow: 2.6,
+            slidesToScroll: 1,
+            // infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 1200,
+          centerMode:true,
           dots: false,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2.2,
+            slidesToScroll: 1,
             // infinite: true,
             dots: true,
           },
@@ -126,19 +145,41 @@ export default class MultipleItems extends Component {
           breakpoint: 1100,
           dots: false,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            // infinite: true
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 900,
+          centerMode:true,
+          dots: false,
+          settings: {
+            slidesToShow: 1.7,
+            slidesToScroll: 1,
             // infinite: true,
             dots: true,
           },
         },
         {
-          breakpoint: 850,
+          breakpoint: 800,
           centerMode:true,
           dots: false,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 3,
+            slidesToShow: 2.3,
+            slidesToScroll: 1,
+            // infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 700,
+          centerMode:true,
+          dots: false,
+          settings: {
+            slidesToShow: 2.2,
+            slidesToScroll: 1,
             // infinite: true,
             dots: true,
           },
@@ -148,7 +189,7 @@ export default class MultipleItems extends Component {
           dots: false,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToScroll: 1,
             initialSlide: 2,
           },
         },
@@ -157,7 +198,19 @@ export default class MultipleItems extends Component {
           dots: false,
           centerMode:true,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 1.4,
+            slidesToScroll: 1,
+            initialSlide: 2,
+            dots: false,
+          },
+        },
+        {
+          breakpoint: 400,
+          centerMode:true,
+          dots: true,
+          centerMode:true,
+          settings: {
+            slidesToShow: 1.1,
             slidesToScroll: 1,
             initialSlide: 2,
             dots: false,

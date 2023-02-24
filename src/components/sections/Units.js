@@ -13,7 +13,7 @@ function Units() {
   console.log("sargasfgadf",scrollToSandox);
   return (
     <>
-      <div className="flex flex-col h-full w-full snapped bg-[#F6F9FF] ">
+      <div className="flex flex-col h-full w-full snapped bg-[#F6F9FF] pt-[4rem]">
         <div className="flex flex-row snap-normal mt-[4rem] mb-[2rem]">
           <div className="h-10 w-5 bg-[#FFAE00] w-[10%] lg:w-[12%] mr-10"></div>
           <p className="text-3xl text-left font-bold uppercase">

@@ -125,7 +125,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 .item-click {
   height: 25rem;
-  min-width: 20rem;
+  min-width: 16rem;
   margin: 10px;
 }
 .item-click img {
@@ -295,7 +295,11 @@ ul {
       1px 1px 0 #000;
   
 }
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: transparent !important;
+}
 
-.slick-dots{
-  display: hidden !important;
+.slick-dots li button:before {
+  color: transparent !important;
 }
