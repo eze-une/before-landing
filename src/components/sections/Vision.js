@@ -51,7 +51,7 @@ function Vision({ myref }) {
   // console.log({myref});
   return (
     <div
-      className="w-full flex flex-col  mb-20 space-y-8 md:w-[90%] lg:w-[80%] md:pt-20 lg:mt-20"
+      className="w-full flex flex-col  mb-20 space-y-8 md:w-[90%] lg:w-[80%] md:pt-10 lg:mt-15"
       ref={myref}
       id="vision"
     >
@@ -59,11 +59,11 @@ function Vision({ myref }) {
         <div className="flex flex-col justify-center items-center h-[100vh]   px-5 md:px-10 py-10 space-y-10 text-[#FFFFFF] rounded-0 lg:space-y-5 md:h-full lg:flex-row bg-[#000000]  md:rounded-[25px] lg:text-1xl lg:justify-start snapped">
           <div className=" flex w-full lg:w-[40%] text-4xl font-bold items-center">
             <div className="w-3 h-full md:h-[4rem] lg:h-[6rem] mr-5 bg-[#57BE94]"></div>
-            <p className="text-2xl md:text-5xl ">
+            <p className="text-3xl md:text-5xl ">
               Our <span className="text-[#57BE94]">vision</span> lean towards
             </p>
           </div>
-          <div className="w-full text-1xl lg:text-1xl lg:w-[60%] flex flex-col space-y-10 lg:space-y-0 items-center snapped">
+          <div className="w-full text-[1.3rem] lg:text-1xl lg:w-[60%] flex flex-col space-y-10 lg:space-y-0 items-center snapped">
             <p>
               creating several businesses from{" "}
               <span className="text-[#57BE94]">scratch</span> using our own
@@ -106,7 +106,7 @@ function Vision({ myref }) {
             </span>{" "}
             a project
           </p>
-          <p className="font-light">
+          <p className="font-light ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -168,7 +168,7 @@ function Vision({ myref }) {
       </div>
 
       <div className="hidden h-full md:flex hidden justify-between w-full space-x-10 snapped">
-        <div className="h-[300px] w-full flex flex-col justify-center items-start text-left slg:pace-y-10 md:mr-[-1.3rem]">
+        <div className="h-[300px] w-full flex flex-col justify-center items-start text-left lg:space-y-10 md:mr-[-1.3rem]">
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span

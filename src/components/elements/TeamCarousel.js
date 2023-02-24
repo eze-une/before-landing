@@ -1,70 +1,11 @@
-// import React, { useState } from "react";
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
-
-// import { BsArrowLeft } from "react-icons/bs";
-// import { BsArrowRight } from "react-icons/bs";
-
-
-
-// const responsive = {
-//   desktop: {
-//     breakpoint: { max: 3000, min: 1024 },
-//     items: 1,
-//   },
-//   tablet: {
-//     breakpoint: { max: 1024, min: 464 },
-//     items: 1,
-//   },
-//   mobile: {
-//     breakpoint: { max: 464, min: 0 },
-//     items: 1,
-//   },
-// };
-
-
-
-// const CustomRight = ({ onClick }) => (
-//     <button className="arrow right" onClick={onClick} style={arrowStyle}>
-//       <GoChevronRight style={{ fontSize: "40px" }} />
-//     </button>
-//   );
-//   const CustomLeft = ({ onClick }) => (
-//     <button className="arrow left" onClick={onClick} style={arrowStyle}>
-//       <GoChevronLeft style={{ fontSize: "40px" }} />
-//     </button>
-//   );
-
-// function TeamCarousel() {
-//   return (
-//     <Carousel
-//       responsive={responsive}
-//       swipeable={true}
-//       infinite={false}
-//       className="pb-[13rem] h-full snapped" 
-//       customRightArrow={<CustomRight />}
-//       customLeftArrow={<CustomLeft />}
-//     >
-//       {teamlist.map((member, index) => (
-//         <TeamImage
-//           name={member.name}
-//           link={member.link}
-//           position={member.position}
-//           image={member.image}
-//           key={index}
-//         />
-//       ))}
-//     </Carousel>
-//   );
-// }
-
-// export default TeamCarousel;
-
-import { useState, useRef, useEffect } from 'react';
+import React, { Component } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import TeamImage from './TeamImage';
 import {GoChevronRight} from "react-icons/go";
 import {GoChevronLeft} from "react-icons/go";
-// Data
+
 const teamlist = [
   {
     name: "Person Person",
@@ -116,79 +57,118 @@ const teamlist = [
     position: "CEO",
   },
 ];
-const Carousel = () => {
-  const maxScrollWidth = useRef(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const carousel = useRef(null);
 
-  const movePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevState) => prevState - 1);
-    }
-  };
 
-  const moveNext = () => {
-    if (
-      carousel.current !== null &&
-      carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
-    ) {
-      setCurrentIndex((prevState) => prevState + 1);
-    }
-  };
 
-  const isDisabled = (direction) => {
-    if (direction === 'prev') {
-      return currentIndex <= 0;
-    }
-
-    if (direction === 'next' && carousel.current !== null) {
-      return (
-        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
-      );
-    }
-
-    return false;
-  };
-
-  useEffect(() => {
-    if (carousel !== null && carousel.current !== null) {
-      carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
-    }
-  }, [currentIndex]);
-
-  useEffect(() => {
-    maxScrollWidth.current = carousel.current
-      ? carousel.current.scrollWidth - carousel.current.offsetWidth
-      : 0;
-  }, []);
-
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
   return (
-    <div className="carousel mx-auto">
-      <div className="relative overflow-hidden">
-        <div className="flex justify-between absolute top left w-full h-full text-[#57BE94]">
-          
-          <button
-            onClick={movePrev}
-            className="ml-2 w-30  flex justify-center items-center   text-center  disabled:opacity-0  z-10 my-[11rem] m-0 transition-all ease-in-out duration-300"
-            disabled={isDisabled('prev')}
-          >
-            <GoChevronLeft className="bg-white rounded-full p-3 text-[50px]"/>
-            <span className="sr-only">Prev</span>
-          </button>
-          <button
-            onClick={moveNext}
-            className="ml-2 w-30  flex justify-center items-center   text-center  disabled:opacity-0  z-10 my-[11rem] m-0 transition-all ease-in-out duration-300"
-            disabled={isDisabled('next')}
-          >
-            <GoChevronRight className="bg-white rounded-full p-3 text-[50px]"/>
-            <span className="sr-only">Next</span>
-          </button>
-        </div>
-        <div
-          ref={carousel}
-          className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
-        >
-          {teamlist.map((member, index) => (
+    // <div
+    //   className={className}
+    //   style={{ ...style, display: "block",marginLeft:'-30px',transform: "scale(2)"}}
+    //   onClick={onClick}
+    // />
+    <div style={{ ...style, display: "block" }}
+    onClick={onClick}
+    className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute ml-[95%]  mt-[-13.6rem]">
+     <GoChevronRight />
+  </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    // <div
+    //   className={className}
+    //   style={{ ...style, display: "block", background: "",transform: "scale(2)" }}
+    //   onClick={onClick}
+    // />
+    <div style={{ ...style, display: "block" }}
+      onClick={onClick}
+      className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute m mt-[12.8rem]">
+       <GoChevronLeft />
+    </div>
+  );
+}
+
+export default class MultipleItems extends Component {
+  render() {
+    const settings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      responsive: [
+        {
+          breakpoint: 1500,
+          dots: false,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 1300,
+          dots: false,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            // infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 1100,
+          dots: false,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            // infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 850,
+          centerMode:true,
+          dots: false,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 3,
+            // infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600, 
+          dots: false,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 500,
+          dots: false,
+          centerMode:true,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 2,
+            dots: false,
+          },
+        },
+      ],
+    };
+    return (
+      <div className="relative">
+        <Slider {...settings}>
+        {teamlist.map((member, index) => (
         <TeamImage
           name={member.name}
           link={member.link}
@@ -197,10 +177,8 @@ const Carousel = () => {
           key={index}
         />
       ))}
-        </div>
+        </Slider>
       </div>
-    </div>
-  );
-};
-
-export default Carousel;
+    );
+  }
+}

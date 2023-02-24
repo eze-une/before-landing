@@ -120,7 +120,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .item {
   height: 25rem;
-  min-width: 13rem;
+  max-width: 13rem;
   margin: 10px;
 }
 .item-click {
@@ -294,4 +294,12 @@ ul {
       -1px 1px 0 #000,
       1px 1px 0 #000;
   
+}
+
+.slick-prev, .slick-next {
+  font-size: 15px !important;
+}
+
+ .slick-prev:before, .slick-next:before  {
+  content: '' !important;
 }

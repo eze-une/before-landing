@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Xarrow from "react-xarrows";
 import UnitScrollableDetails from "../elements/UnitScrollableDetails";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-
+import CurvedLine from '../../assets/Vector 33611.png'
 
 function Units() {
   const textLineStart = useRef(null);
@@ -13,42 +13,32 @@ function Units() {
   console.log("sargasfgadf",scrollToSandox);
   return (
     <>
-      <div className="flex flex-col h-full w-full space-y-20 lg:space-y-0 snapped bg-[#F6F9FF] ">
-        <div className="flex flex-row snap-normal my-[4rem]">
+      <div className="flex flex-col h-full w-full snapped bg-[#F6F9FF] ">
+        <div className="flex flex-row snap-normal mt-[4rem] mb-[2rem]">
           <div className="h-10 w-5 bg-[#FFAE00] w-[10%] lg:w-[12%] mr-10"></div>
           <p className="text-3xl text-left font-bold uppercase">
           How Do we make these true?
           </p>
         </div>
-        <div className="flex flex-col mt-10 items-center justify-center text-center  md:mx-[10%]  pb-[10rem] lg:flex-row" >
+        <div className="flex flex-col items-center justify-center text-center  md:mx-[10%] lg:mt-[-2.7rem] xl:mt-[-4rem] lg:flex-row pb-[4rem]" >
           <p
-            className="text-5xl font-bold lg:py-10 lg:text-left lg:text-7xl md:w-[55%] leading-[5rem]"
+            className="text-5xl font-bold lg:py-10 lg:text-left lg:text-7xl md:w-[55%] leading-[4rem] lg:leading-[5rem]"
             ref={textLineStart} 
           >
             These Are The{" "}
             <span className="inline-block relative">
               <span
-                className="outline text-[#F6F9FF]  z-0"
+                className="outline text-[#F6F9FF] z-0"
           
               >
                 Units
               </span>
 
-              <svg
-                width="full"
-                height="15"
-                viewBox="0 0 91 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute z-10 mt-[-6px]"
-              >
-                <path
-                  d="M3 9.86439C17.7216 4.24063 55.332 -3.20552 88 12"
-                  stroke="#FFAE00"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                />
-              </svg>
+              <img
+                src={CurvedLine}
+                className="w-full h-[20.07px] md:w-[80%] md:w-[19rem] lg:w-[25rem] mt-[-.7rem] lg:mt-[-.6rem] z-5 absolute"
+                alt="Flowbite Logo"
+              />
             </span>{" "}
             That Help Us Get There
           </p>

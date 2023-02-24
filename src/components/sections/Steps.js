@@ -92,13 +92,7 @@ function useOnScreen(ref, rootMargin = "0px") {
 function Steps() {
   const [scrollIndex, setscrollIndex] = useState();
   const tref = useRef();
-  // const mobileRef=useRef();
-  // const onScreenMobile=useOnScreen(mobileRef,"-20%");
   const onScreen = useOnScreen(tref, "-20%");
-  
-  
-  // const [YMobile, setYMobile] = useState();
-  // const [XMobile, setXMobile] = useState();
 
   const [Y, setY] = useState();
   const [X, setX] = useState();
@@ -111,19 +105,6 @@ function Steps() {
     setY(y)
   }
 
-  // const getPositionMobile=()=>{
-  //   const YMobile=mobileRef.current.offsetTop;
-  //   const XMobile=mobileRef.current.offsetLeft;
-  //   setX(XMobile);
-  //   setY(YMobile);
-  // }
-  // useEffect(()=>{
-  //   getPositionMobile();
-  // })
-  // useEffect(() => {
-  //   window.addEventListener("resize", getPositionMobile);
-  // }, []);
-
   useEffect(() => {
     getPosition();
   }, []);
@@ -134,13 +115,9 @@ function Steps() {
   if (onScreen) {
     window.scrollTo({top:Y, left:X})
   }
-  // if (onScreenMobile) {
-  //   window.scrollTo({top:YMobile, left:XMobile})
-  // }
-  
   return (
     <>
-      <div className="w-full mb-[4rem]">
+      <div className="w-full mb-[2rem]">
         <div className="flex flex-row">
           <div className="h-10 w-5 bg-[#FFAE00] w-[10%] lg:w-[12%] mr-5 md:mr-10"></div>
           <p className="text-2xl md:text-3xl text-left font-bold uppercase">
