@@ -6,13 +6,13 @@ import Header from "../layouts/Header";
 
 function Hero({ sliderRange, setsliderRange }) {
   return (
-    <div className="bg-[#E7F0F5] w-full mx-5 md:w-[80%] h-[105vh] flex flex-col snap-normal" id="hero">
+    <div className="bg-[#E7F0F5] w-full mx-5 md:w-[80%] h-[100vh] h-[105vh] flex flex-col snap-normal" id="hero">
       <Header />
 
       <div className=" flex flex-row items-center justify-between h-[75%] ">
         {/* left */}
         <div className="w-full flex flex-col h-full w-full lg:w-[50%] items-start justify-center text-left">
-          <h1 className="text-5xl md:text-8xl lg:text-7xl text-left font-bold mb-10 leading-[3.9rem]">
+          <h1 className="text-5xl md:text-8xl lg:text-7xl text-left font-bold mb-10 leading-[3.9rem] lg:leading-[5rem] xl:leading-[5.6rem]">
             We build{" "}
             <span className="inline-block relative">
               <span
@@ -22,11 +22,12 @@ function Hero({ sliderRange, setsliderRange }) {
               </span>
               <img
                 src={curvedUnderline}
-                className="w-[125px] h-[21.07px] md:w-full mt-[-.4rem] z-5 absolute"
+                className="w-[125px] h-[25.07px] md:w-[80%] lg:w-[80%] xl:w-[85%] mt-[-.7rem] md:mt-[-0.9rem] lg:mt-[-.7rem] z-5 absolute"
                 alt="Flowbite Logo"
               />
             </span>
             <br />
+            <span className="md:mt-[5rem]">
             ideas that l
             <span className="inline-block">
               <img
@@ -43,6 +44,7 @@ function Hero({ sliderRange, setsliderRange }) {
               />
             </span>
             k imaginative
+            </span>
           </h1>
           <h2 className="w-full md:w-[80%] text-2xl">
             The word <span className="text-[#57BE94]">ablaze</span> refers to a{" "}
