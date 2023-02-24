@@ -16,9 +16,9 @@ export default function Teams() {
           </p>
         </div>
         <div className="w-full h-full flex flex-col md:flex-row justify-start items-center  ">
-          <div className="h-full md:my-10 w-full  mt-0  md:mt-0  md:w-[40%] flex flex-row items-start sm:justify-center justify-center  md:pl-[1rem] lg:pl-[2rem] ">
-            <div className="h-[15rem] xsm:h-[18.5rem] sm:h-[18rem] md:h-[24rem] lg:h-[20rem] md:pb-20 w-[2rem]  bg-[#57BE94] mx-[1rem] lg:h-[25rem]"></div>
-            <p className="h-full sm:h-[20rem] text-4xl xs:text-5xl xsm:text-[3.6rem]  md:text-[3rem] lg:text-[3.4rem] xl:text-[3.6rem] 1xl:text-[4rem] 2xl:text-[4rem] font-medium text-left w-full sm:w-[60%] md:w-[100%] lg:w-[70%] lg:h-[25rem]">
+          <div className="h-full md:my-10 w-full  mt-0  md:mt-[-1rem]  md:w-[40%] flex flex-row items-start sm:justify-center justify-center  md:pl-[1rem] lg:pl-[2rem] ">
+            <div className="h-[15rem] xsm:h-[18.5rem] sm:h-[18rem] md:h-[24rem] lg:h-[20rem] md:pb-20 w-[1.7rem]  bg-[#57BE94] mx-[1rem] lg:h-[25rem]"></div>
+            <p className="h-full sm:h-[20rem] text-4xl xs:text-5xl xsm:text-[3.6rem]  md:text-[3rem] lg:text-[3.4rem] xl:text-[3.6rem] 1xl:text-[4rem] 2xl:text-[4rem] font-medium text-left w-full sm:w-[60%] md:w-[100%] lg:w-[70%] lg:h-[24rem]">
               We would like to push the innovative{" "}
               <span
                 className="text-[#57BE94] inline-block -mr-8 xsm:-mr-2"
@@ -32,7 +32,7 @@ export default function Teams() {
               of technology
             </p>
           </div>
-          <div className="w-full mt-[2rem] md:mt-0 w-[90%] md:w-[55%]  h-full">
+          <div className="w-full mt-[2rem] md:mt-[-2rem] w-[90%] md:w-[55%]  h-full">
             <TeamCarousel />
           </div>
         </div>
