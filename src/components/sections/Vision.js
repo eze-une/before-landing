@@ -57,8 +57,8 @@ function Vision({ myref }) {
     >
       <div className="flex flex-col items-center justify-between text-left ">
         <div className="flex flex-col justify-center items-center h-[100vh]   px-5 md:px-10 py-10 space-y-10 text-[#FFFFFF] rounded-0 lg:space-y-5 md:h-full lg:flex-row bg-[#000000]  md:rounded-[25px] lg:text-1xl lg:justify-start snapped">
-          <div className=" flex w-full lg:w-[40%] text-4xl font-bold items-center">
-            <div className="w-3 h-full md:h-[4rem] lg:h-[6rem] mr-5 bg-[#57BE94]"></div>
+          <div className=" flex w-full lg:w-[40%] pr-[2rem] text-4xl font-bold items-center">
+            <div className="w-3 h-full md:h-[4rem] lg:h-[15rem] mr-5 bg-[#57BE94]"></div>
             <p className="text-3xl md:text-5xl ">
               Our <span className="text-[#57BE94]">vision</span> lean towards
             </p>
@@ -168,7 +168,7 @@ function Vision({ myref }) {
       </div>
 
       <div className="hidden h-full md:flex hidden justify-between w-full space-x-10 snapped">
-        <div className="h-[300px] w-full flex flex-col justify-center items-start text-left lg:space-y-10 md:mr-[-1.3rem]">
+        <div className="h-[300px] w-full flex flex-col justify-center items-start text-left lg:space-y-10 md:mr-[-1.3rem] lg:mr-0">
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">
               <span
