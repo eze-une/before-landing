@@ -28,8 +28,7 @@ function BodySection() {
     <div className='w-full'>
       <div className='flex flex-col items-center justify-center h-full mx-auto snap-y snap-proximity '>
         <div className='w-full flex justify-center bg-[#E7F0F5]'>
-        <Hero className="snap-normal" sliderRange={sliderRange} setsliderRange={setsliderRange} ref={myref}/>  
-
+        <Hero sliderRange={sliderRange} setsliderRange={setsliderRange} ref={myref}/>  
         </div>
         <Vision className="snap-normal" myref={myref}/>   
         <Steps  className="snap-center snap-always container" ref={stepsref} setinview={setinview} val={val}/>
