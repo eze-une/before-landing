@@ -1,12 +1,11 @@
 import TeamCarousel from "../elements/TeamCarousel";
 import curvedUnderline from "../../assets/Vector 346.png";
 
-
 export default function Teams() {
   return (
     <>
       <div
-        className="flex flex-col w-full snapped bg-[#F6F9FF]"
+        className="flex flex-col w-full snap-center bg-[#F6F9FF]"
         id="teams"
       >
         <div className="flex flex-row mt-[5rem] mb-[2rem] sm:mb-[4rem]">
@@ -32,8 +31,8 @@ export default function Teams() {
               of technology
             </p>
           </div>
-          <div className="w-full mt-[2rem] md:mt-[-2rem] w-[85%] md:w-[55%]  h-full">
-            <TeamCarousel />
+          <div className="w-[85%] mt-[2rem] md:mt-[-2rem] sm-w-[100%] md:w-[59%]  h-full">
+            <TeamCarousel/>
           </div>
         </div>
       </div>

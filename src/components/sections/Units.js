@@ -20,7 +20,7 @@ function Units() {
           How Do we make these true?
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center text-center  md:mx-[10%] lg:mt-[-2.7  rem] xl:mt-[-4rem] lg:flex-row pb-[4rem]" >
+        <div className="flex flex-col items-center justify-center text-center  md:mx-[10%] lg:mt-[-2.7  rem] xl:mt-[-4rem] lg:flex-row pb-[4rem] snap-center" >
           <p
             className="text-5xl font-bold lg:py-10 lg:text-left lg:text-7xl md:w-[55%] leading-[4rem] lg:leading-[5rem]"
             ref={textLineStart} 
@@ -102,7 +102,7 @@ function Units() {
       />
 
       {/* bottom scrollable part */}
-      <UnitScrollableDetails className="behaviour" scrollToSandox={scrollToSandox} setscrollToSandox={setscrollToSandox} scrollToEngineering={scrollToEngineering} setscrollToEngineering={setscrollToEngineering}/>
+      <UnitScrollableDetails scrollToSandox={scrollToSandox} setscrollToSandox={setscrollToSandox} scrollToEngineering={scrollToEngineering} setscrollToEngineering={setscrollToEngineering}/>
     </>
   );
 }

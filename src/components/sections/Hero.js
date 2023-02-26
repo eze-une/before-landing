@@ -6,7 +6,7 @@ import Header from "../layouts/Header";
 
 function Hero({ sliderRange, setsliderRange }) {
   return (
-    <div className="bg-[#E7F0F5] w-full mx-5 md:w-[80%] h-[100vh] h-[105vh] flex flex-col snap-normal" id="hero">
+    <div className="bg-[#E7F0F5] w-full mx-5 md:w-[80%] h-[100vh] h-[105vh] flex flex-col snap-start" id="hero">
       <Header />
 
       <div className=" flex flex-row items-center justify-between h-[75%] ">

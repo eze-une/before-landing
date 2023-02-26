@@ -51,11 +51,11 @@ function Vision({ myref }) {
   // console.log({myref});
   return (
     <div
-      className="w-full flex flex-col  mb-20 space-y-8 md:w-[90%] lg:w-[80%] md:pt-10 lg:mt-15"
+      className="w-full flex flex-col  mb-20 space-y-8 md:w-[90%] lg:w-[80%] md:pt-10 lg:mt-15 snap-start"
       ref={myref}
       id="vision"
     >
-      <div className="flex flex-col items-center justify-between text-left ">
+      <div className="flex flex-col items-center justify-between text-left snap-center">
         <div className="flex flex-col justify-center items-center h-[100vh]   px-5 md:px-10 py-10 space-y-10 text-[#FFFFFF] rounded-0 lg:space-y-5 md:h-full lg:flex-row bg-[#000000]  md:rounded-[25px] lg:text-1xl lg:justify-start snapped">
           <div className=" flex w-full lg:w-[40%] pr-[2rem] text-4xl font-bold items-center">
             <div className="w-3 h-full md:h-[4rem] lg:h-[15rem] mr-5 bg-[#57BE94]"></div>
@@ -80,7 +80,7 @@ function Vision({ myref }) {
         </div>
       </div>
     
-      <div className="hidden h-full md:flex justify-between w-full space-x-10 snapped">
+      <div className="hidden h-full md:flex justify-between w-full space-x-10 snap-center">
         <div className="h-[300px] w-[100%] flex flex-col justify-center items-start text-left lg:space-y-10 ">
           <p className="text-3xl font-bold">
             <span className="inline-block">
@@ -124,7 +124,7 @@ function Vision({ myref }) {
         ))}
       </div>
 
-      <div className="hidden h-full md:flex justify-between space-x-10">
+      <div className="hidden h-full md:flex justify-between space-x-10 snap-center">
         {row2.map((row, index) => (
           <VisionImageCard
             key={index}
@@ -167,7 +167,7 @@ function Vision({ myref }) {
         </div>
       </div>
 
-      <div className="hidden h-full md:flex hidden justify-between w-full space-x-10 snapped">
+      <div className="hidden h-full md:flex hidden justify-between w-full space-x-10 snap-center">
         <div className="h-[300px] w-full flex flex-col justify-center items-start text-left lg:space-y-10 md:mr-[-1.3rem] lg:mr-0">
           <p className="text-3xl font-bold">
             <span className="inline-block w-[45%] ">

@@ -92,32 +92,64 @@ function useOnScreen(ref, rootMargin = "0px") {
 function Steps() {
   const [scrollIndex, setscrollIndex] = useState();
   const tref = useRef();
+  const smref = useRef();
+
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  });
+
+  console.log("size", windowSize);
+
   const onScreen = useOnScreen(tref, "-20%");
+  const onScreensmall = useOnScreen(smref, "-20%");
 
   const [Y, setY] = useState();
   const [X, setX] = useState();
-  
-  
-  const getPosition=()=>{
-    const y=tref.current.offsetTop;
-    const x=tref.current.offsetLeft;
+
+  const [Ysmall, setYsmall] = useState();
+  const [Xsmall, setXsmall] = useState();
+
+  const getPosition = () => {
+    const y = tref.current.offsetTop;
+    const x = tref.current.offsetLeft;
     setX(x);
     setY(y)
+  }
+  const getPositionsmall = () => {
+    const ysmall = smref.current.offsetTop;
+    const xsmall = smref.current.offsetLeft;
+    setXsmall(xsmall);
+    setYsmall(ysmall);
   }
 
   useEffect(() => {
     getPosition();
+    getPositionsmall();
   }, []);
   useEffect(() => {
     window.addEventListener("resize", getPosition);
+    window.addEventListener("resize", getPositionsmall);
   }, []);
 
-  if (onScreen) {
-    window.scrollTo({top:Y, left:X})
+  if (onScreensmall) {
+    window.scrollTo(Xsmall, Ysmall)
   }
   return (
     <>
-      <div className="w-full mb-[2rem]">
+      <div className="w-full mb-[2rem] scroll-smooth">
         <div className="flex flex-row">
           <div className="h-10 w-5 bg-[#FFAE00] w-[10%] lg:w-[12%] mr-5 md:mr-10"></div>
           <p className="text-2xl md:text-3xl text-left font-bold uppercase">
@@ -125,15 +157,125 @@ function Steps() {
           </p>
         </div>
       </div>
-      <div ref={tref} className="flex flex-col h-screen w-full overflow-y-scroll overscroll-auto z-0  scrollbar snapping  snapped font-bold ">
-        {
+      <div ref={tref} className={onScreen ? "hidden md:flex flex-col h-screen w-full overflow-y-scroll overscroll-auto z-0  snapping scrollbar snapper snap-center font-bold " : "hidden md:flex flex-col h-screen w-full overflow-hidden overscroll-auto z-0  snapping scrollbar snapper font-bold "}>
+        {/* {
           onScreen ? (
+            <> */}
+        <m.div className="h-full w-full">
+          {list2.map(({ color, text1, text2, highlitedText }, index1) => {
+            return (
+              <m.div
+                className="flex flex-col lg:flex-row h-full w-full snapper "
+                key={index1}
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: false, amount: 0.7 }}
+                transition={{ staggerChildren: 0.2 }}
+              >
+                {/* left */}
+                <div className="flex flex-col w-full lg:w-[50%] lg:h-full bg-[#131622] space-y-10 text-3xl justify-center items-center text-[#A7A9B1] text-left"></div>
+
+                {/* right */}
+                <m.div
+                  className="w-full h-full px-[2rem] flex items-center justify-center text-left md:text-center text-white text-3xl md:text-4xl font-bold py-20 lg:w-[50%] md:px-[1rem]"
+                  style={{ backgroundColor: color }}
+                >
+                  <p>
+                    <m.span whileInView={() => setscrollIndex(index1)} variants={textVariant}>{text1} </m.span>
+                    <m.span
+                      variants={textVariant}
+                      className={index1 == 4 ? " md:mx-[-0.6rem] text-[#131622]  inline-block " : "text-[#131622]  inline-block"}
+                    >
+                      {highlitedText}
+                      <img
+                        src={curvedUnderline}
+                        className="md:w-[90%] h-[21.07px]"
+                        alt="Flowbite Logo"
+                      />
+                    </m.span>{" "}
+                    <m.span variants={textVariant}>{text2}</m.span>
+                    <m.p></m.p>
+                  </p>
+                </m.div>
+              </m.div>
+            );
+          })}
+        </m.div>
+
+        {/* tab and desktop left */}
+        <div className="absolute text-left text-[#A7A9B1] space-y-[4rem] ml-[15%] mt-[5%] text-3xl">
+          {list.map((item, index2) => (
+            <div className="hidden lg:flex">
+              <div
+                className={index2 == scrollIndex ? "w-3 mr-5" : "hidden"}
+                style={{ backgroundColor: colorleft[index2] }}
+              ></div>
+              <p
+                className={
+                  index2 == scrollIndex
+                    ? "text-white text-5xl font-bold mr-2"
+                    : "hidden"
+                }
+              >
+                0{index2 + 1}.{" "}
+              </p>
+              <p
+                className={
+                  index2 == scrollIndex
+                    ? "text-white text-5xl"
+                    : "text-gray-300 font-light"
+                }
+              >
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
+
+
+
+        {/* mobile left */}
+        <div className="absolute text-left text-[#A7A9B1] space-y-10 ml-[10%] mt-[10%] text-3xl">
+          {list.map((item, index2) => {
+            if (index2 == scrollIndex) {
+              return (
+                <div className="flex lg:hidden">
+                  <p className="text-white text-3xl font-bold mr-2">
+                    0{index2 + 1}.{" "}
+                  </p>
+                  <p className="text-white text-3xl font-bold">{item}</p>
+                </div>
+              );
+            }
+          }
+          )}
+        </div>
+        {/* </>
+          ) : (
+            <div>
+              <m.div className="h-[100vh] w-full">
+                <m.div
+                  className="flex flex-col lg:flex-row h-full w-full ">
+                  <div className="hidden lg:flex flex-col w-full lg:w-[50%] h-full bg-[#131622]"></div>
+                  <div className="lg:flex flex-col w-full lg:w-[50%] h-full bg-[#FFAE00] space-y-10 text-3xl justify-center items-center text-[#A7A9B1] text-left"></div>
+
+                </m.div>
+
+              </m.div>
+            </div>
+          )
+        } */}
+      </div>
+
+      <div ref={smref} className="flex md:hidden flex-col h-screen w-full overflow-y-scroll overscroll-auto z-0  snapping scrollbar snapper font-bold ">
+        {
+          onScreensmall ? (
             <>
               <m.div className="h-full w-full">
                 {list2.map(({ color, text1, text2, highlitedText }, index1) => {
                   return (
                     <m.div
-                      className="flex flex-col lg:flex-row h-full w-full snap-always snap-center "
+                      className="flex flex-col lg:flex-row h-full w-full snapper "
                       key={index1}
                       initial={"offscreen"}
                       whileInView={"onscreen"}

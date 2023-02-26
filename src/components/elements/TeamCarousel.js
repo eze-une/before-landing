@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TeamImage from './TeamImage';
-import {GoChevronRight} from "react-icons/go";
-import {GoChevronLeft} from "react-icons/go";
+import { GoChevronRight } from "react-icons/go";
+import { GoChevronLeft } from "react-icons/go";
 
 const teamlist = [
   {
@@ -64,10 +64,10 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div style={{ ...style, display: "block" }}
-    onClick={onClick}
-    className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute ml-[95%]  mt-[-13.6rem]">
-     <GoChevronRight />
-  </div>
+      onClick={onClick}
+      className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute ml-[86%]  sm:ml-[96%]  mt-[-13.6rem]">
+      <GoChevronRight />
+    </div>
   );
 }
 
@@ -76,17 +76,19 @@ function SamplePrevArrow(props) {
   return (
     <div style={{ ...style, display: "block" }}
       onClick={onClick}
-      className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute mt-[12.8rem]">
-       <GoChevronLeft />
+      className="mt-0 bg-white rounded-full p-3 text-[#57BE94] text-[25px] z-10 absolute ml-[-1.4rem]  mt-[12.8rem]">
+      <GoChevronLeft />
     </div>
   );
 }
 
-export default class MultipleItems extends Component {
-  render() {
+export default function MultipleItems() {
+  // render() {
     const settings = {
       dots: true,
       infinite: false,
+      // centerMode: true,
+      initialSlide: 2,
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -96,109 +98,131 @@ export default class MultipleItems extends Component {
         {
           breakpoint: 1700,
           dots: true,
+          centerMode: true,
           settings: {
-            slidesToShow: 3.2 ,
+            slidesToShow: 3.7,
             slidesToScroll: 1,
-            dots: true,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 1600,
           dots: true,
+          centerMode: true,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 3.4,
             slidesToScroll: 1,
-            dots: true,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 1500,
           dots: true,
+          centerMode: true,
           settings: {
-            slidesToShow: 2.7,
+            slidesToShow: 3.2 ,
             slidesToScroll: 1,
-            dots: true,
+            initialSlide: 2,
+            dots: false,
+          },
+        },
+        {
+          breakpoint: 1400,
+          dots: true,
+          centerMode: true,
+          settings: {
+            slidesToShow: 2.9,
+            slidesToScroll: 1,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 1300,
           dots: true,
+          centerMode: true,
           settings: {
-            slidesToShow: 2.6,
+            slidesToShow: 2.8,
             slidesToScroll: 1,
-            // infinite: true,
-            dots: true,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 1200,
-          centerMode:true,
-          dots: false,
+          centerMode: true,
+          dots: true,
           settings: {
-            slidesToShow: 2.2,
+            slidesToShow: 2.5,
             slidesToScroll: 1,
-            // infinite: true,
-            dots: true,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 1100,
-          dots: false,
+          dots: true,
+          centerMode: true,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 2.3,
             slidesToScroll: 1,
-            // infinite: true
-            dots: true,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 900,
-          centerMode:true,
-          dots: false,
+          centerMode: true,
+          dots: true,
           settings: {
-            slidesToShow: 1.7,
+            slidesToShow: 1.9,
             slidesToScroll: 1,
-            // infinite: true,
-            dots: true,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 800,
-          centerMode:true,
-          dots: false,
+          centerMode: true,
+          dots: true,
           settings: {
-            slidesToShow: 2.3,
+            slidesToShow: 2.4 ,
             slidesToScroll: 1,
-            // infinite: true,
-            dots: true,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 700,
-          centerMode:true,
-          dots: false,
+          centerMode: true,
+          dots: true,
           settings: {
             slidesToShow: 2.2,
             slidesToScroll: 1,
-            // infinite: true,
-            dots: true,
+            initialSlide: 2,
+            dots: false,
           },
         },
         {
-          breakpoint: 600, 
-          dots: false,
+          breakpoint: 600,
+          centerMode: true,
+          dots: true,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1.7,
             slidesToScroll: 1,
             initialSlide: 2,
+            dots: false,
           },
         },
         {
           breakpoint: 500,
-          dots: false,
-          centerMode:true,
+          // dots: false,
+          dots: true,
+          centerMode: true,
           settings: {
-            slidesToShow: 1.4,
+            slidesToShow: 1.3,
             slidesToScroll: 1,
             initialSlide: 2,
             dots: false,
@@ -206,11 +230,10 @@ export default class MultipleItems extends Component {
         },
         {
           breakpoint: 400,
-          centerMode:true,
           dots: true,
-          centerMode:true,
+          centerMode: true,
           settings: {
-            slidesToShow: 1.1,
+            slidesToShow: 1,
             slidesToScroll: 1,
             initialSlide: 2,
             dots: false,
@@ -218,20 +241,24 @@ export default class MultipleItems extends Component {
         },
       ],
     };
+    const [isClicked, setisClicked] = useState();
     return (
       <div className="relative">
         <Slider {...settings}>
-        {teamlist.map((member, index) => (
-        <TeamImage
-          name={member.name}
-          link={member.link}
-          position={member.position}
-          image={member.image}
-          key={index}
-        />
-      ))}
+          {teamlist.map((member, index) => (
+            <TeamImage
+              name={member.name}
+              link={member.link}
+              position={member.position}
+              image={member.image}
+              key={index}
+              index={index}
+              isClicked={isClicked}
+              setisClicked={setisClicked}
+            />
+          ))}
         </Slider>
       </div>
     );
-  }
+  // }
 }
